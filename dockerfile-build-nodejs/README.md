@@ -61,6 +61,7 @@ If you decide to make changes to your app (HTML, styles..) you won't see changes
 
 ## Run the image in the container
 
+
 ```
 docker container run --rm -p 80:3000 testnode
 ´´´

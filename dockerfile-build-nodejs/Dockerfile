@@ -17,4 +17,15 @@ RUN mkdir -p /usr/src/app
 # Node uses a "package manager" so it needs to copy in package.json
 WORKDIR /usr/src/app
 
-# 
+# Installs 'npm' and temporary cache (ampersand to install one after the other)
+RUN npm install && npm install --cache /tmp/empty-cache
+# As of npm@5. the npm cache self-heals from corruption issues so 'npm cache clean' isn't necessary
+# Data extratced from the cache is guaranteed to be valid.
+# If you want to make sure everything is consistent use 'npm cache verify'.
+# I'm using if I'm potentially debugging an issue with the installer 
+# Deleting the cache can only make npm go slower.
+
+# Copy in all files from current directory on the host to the current direcotry in the image 
+COPY . .
+
+

@@ -58,4 +58,7 @@ Hello World! This is Flask app
 To stop and remove containers
 ```
 $ docker compose down
+[+] Running 2/2
+ ✔ Container compose-flask-web-1  Removed                                                                                                                    0.5s 
+ ✔ Network compose-flask_default  Removed
 ```

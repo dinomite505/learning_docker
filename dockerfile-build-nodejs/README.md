@@ -6,7 +6,7 @@ Pre-pulling **node** and **alpine** images and having them locally can increase 
 
 ```
 docker pull node
-docker pull alpine:3.18.4
+docker pull alpine:3.17
 ```
 
 
@@ -15,11 +15,12 @@ docker pull alpine:3.18.4
 These are the layers we are building the image on. You can find detailed explanation for each command in the [_Dockerfile_](Dockerfile)
 
 ```
-FROM node:alpine:3.18.4
+FROM node:21-alpine3.17
 EXPOSE 3000
 RUN apk --update tini
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
+COPY package.json package.json
 RUN npm install && npm install --cache /tmp/empty-cache
 COPY . .
 CMD ["tini", "node", "./bin/www"]
@@ -32,6 +33,29 @@ Make sure you have a valid Dockerfile in the current directory, and the Docker d
 ```
 docker build -t testnode .
 ```
+
+### Expected Output:
+```
+[+] Building 5.7s (12/12) FINISHED                                             docker:default
+ => [internal] load build definition from Dockerfile                                     0.0s
+ => => transferring dockerfile: 1.43kB                                                   0.0s
+ => [internal] load .dockerignore                                                        0.0s
+ => => transferring context: 448B                                                        0.0s
+ => [internal] load metadata for docker.io/library/node:21-alpine3.17                    0.6s
+ => [1/7] FROM docker.io/library/node:21-alpine3.17@sha256:c8e4f0ad53631bbf60449e394a33  0.0s
+ => [internal] load build context                                                        0.0s
+ => => transferring context: 682B                                                        0.0s
+ => CACHED [2/7] RUN apk update tini                                                     0.0s
+ => CACHED [3/7] RUN mkdir -p /usr/src/app                                               0.0s
+ => CACHED [4/7] WORKDIR /usr/src/app                                                    0.0s
+ => [5/7] COPY package.json package.json                                                 0.0s
+ => [6/7] RUN npm install && npm cache verify                                            4.8s
+ => [7/7] COPY . .                                                                       0.0s
+ => exporting to image                                                                   0.2s
+ => => exporting layers                                                                  0.1s
+ => => writing image sha256:8e2094700e47a07e7c37607a2eef90d758f60e0db099482a926e56401d1  0.0s
+ => => naming to docker.io/library/testnode                                              0.0s
+```
 If you decide to make changes to your app (HTML, styles..) you won't see changes until you rebuild the app.
 
 
@@ -42,14 +66,11 @@ docker container run --rm -p 80:3000 testnode
 ´´´
 Container is not detached so you can see HTTP access logs entries and it is removed once you exit.
 
+Open `localhost` in your browser to see the app.
 
+**"There is a way out of every box, a solution to every puzzle..."**
 
-
-
-
-
-
-You will see GET requests similar to this:
+Back in the container, you will see GET requests similar to this:
 ```
 GET / 200 38.482 ms - 290
 GET /stylesheets/style.css 200 4.367 ms - 111

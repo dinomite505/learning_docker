@@ -54,6 +54,9 @@ After the application starts open `http://localhost:8000` in your web browser or
 $ curl localhost:8000
 Hello World! This is Flask app
 ```
+## Output screenshot
+
+![flaskapp](https://github.com/dinomite505/learning_docker/assets/131146683/e1e4ab28-926e-4e62-8034-ab61d281cc31)
 
 To stop and remove containers
 ```

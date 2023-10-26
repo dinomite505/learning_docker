@@ -28,4 +28,8 @@ RUN npm install && npm install --cache /tmp/empty-cache
 # Copy in all files from current directory on the host to the current direcotry in the image 
 COPY . .
 
-
+# It starts the container using 'tini
+CMD ["tini", "node", "./bin/www"]
+# this is exec form that is prefered by Docker and it is in JSON format.
+# when the container is started from an image it will execute 'tini' as PID1 initial process, which
+# then starts the Node.js process with ./bin/www script (check bin folder)

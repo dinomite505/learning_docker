@@ -8,3 +8,8 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     return "Hello World. This is Flask app"
+
+# Check if the script is run as the main
+if __name__ == '__main__':
+    # Start Flask dev server accessible for any network interface. Listening on 8000
+    app.run(host='0.0.0.0', port=8000)

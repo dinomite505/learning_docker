@@ -3,22 +3,23 @@
 # NOTE: You'll find how to run this with other info in README.md
 
 # Using official 'node' image with Alpine branch
-FROM node:alpine:3.18.4
+FROM node:21-alpine3.17
 
 # This app will listen on port 3000
 EXPOSE 3000
 
 # Thid image will use alpine package manager to install 'tini'
-RUN apk --update tini
+RUN apk update tini
 
 # Create a directory for app files
 RUN mkdir -p /usr/src/app
 
 # Node uses a "package manager" so it needs to copy in package.json
 WORKDIR /usr/src/app
+COPY package.json package.json
 
 # Installs 'npm' and temporary cache (ampersand to install one after the other)
-RUN npm install && npm install --cache /tmp/empty-cache
+RUN npm install && npm cache verify
 # As of npm@5. the npm cache self-heals from corruption issues so 'npm cache clean' isn't necessary
 # Data extratced from the cache is guaranteed to be valid.
 # If you want to make sure everything is consistent use 'npm cache verify'.

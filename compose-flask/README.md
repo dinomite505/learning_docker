@@ -13,7 +13,6 @@ Structure:
 
 [_compose.yaml_](compose.yaml)
 ```
-
 services:
   web:
     build:
@@ -44,7 +43,6 @@ docker compose up -d
 
  Listing containers should show only one container running and the port mapping like below:
  ```
-
 $ docker compose ps
 NAME                  IMAGE               COMMAND            SERVICE   CREATED         STATUS         PORTS
 compose-flask-web-1   compose-flask-web   "python3 app.py"   web       5 minutes ago   Up 5 minutes   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp
@@ -52,7 +50,6 @@ compose-flask-web-1   compose-flask-web   "python3 app.py"   web       5 minutes
 
 After the application starts open `http://localhost:8000` in your web browser or run:
 ```
-
 $ curl localhost:8000
 Hello World! This is Flask app
 ```

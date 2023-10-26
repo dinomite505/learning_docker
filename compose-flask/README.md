@@ -49,6 +49,7 @@ compose-flask-web-1   compose-flask-web   "python3 app.py"   web       5 minutes
 ```
 
 After the application starts open `http://localhost:8000` in your web browser or run:
+
 ```
 $ curl localhost:8000
 Hello World! This is Flask app

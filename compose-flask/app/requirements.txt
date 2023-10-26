@@ -1,0 +1,6 @@
+flask:
+
+python --version
+pip --version
+pip install Flask
+flask --version

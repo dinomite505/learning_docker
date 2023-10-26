@@ -37,3 +37,6 @@ RUN <<EOF
 addgroup -S docker
 adduser -S --shell /bin/bash --ingroup docker dino
 EOF
+
+# install Docker tools/plugins (cli, buildx, scan, compose) from DockerHub image
+COPY --from=gloursdocker/docker / /

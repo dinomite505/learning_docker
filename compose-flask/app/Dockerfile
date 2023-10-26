@@ -22,7 +22,15 @@ CMD ["app.py"]
 
 FROM builder as dev-envs
 
+# run commands to install dependencies. Enclosed within the script block
+# you can also use ampersand (&&) to separate multiple shell commands
 RUN <<EOF
 apk update
 apk add git
+EOF
+
+# Add user and group to Docker image
+RUN <<EOF
+add group docker
+add user -S --shell /bin/bash --ingroup docker vscode
 EOF

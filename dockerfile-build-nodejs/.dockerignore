@@ -1,21 +1,4 @@
 # add git-ignore syntax here of things you don't want copied into docker image
-# temporary files and directories
-.tmp/
-.temp/
-temp/
-tmp/
-
-.vscode/
-
-# configs
-.bash_history
-.bashrc
-.vim/
-
-# test data
-test/
-tests/
-spec/
 
 
 # for all code you usually don't want .git history in image, just the current commit you have checked out

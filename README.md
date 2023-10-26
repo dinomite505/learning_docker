@@ -26,6 +26,6 @@ services:
       - '8000:8000'
 ```
 
-## To deploy with compose
+## To deploy with docker compose
 
 ```

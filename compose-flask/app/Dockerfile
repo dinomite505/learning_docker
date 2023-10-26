@@ -20,6 +20,7 @@ COPY . /app
 ENTRYPOINT ["python3"]
 CMD ["app.py"]
 
+# create new build stage based on build stage 'builder'
 FROM builder as dev-envs
 
 # run commands to install dependencies. Enclosed within the script block

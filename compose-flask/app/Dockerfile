@@ -30,7 +30,10 @@ apk add git
 EOF
 
 # Add user and group to Docker image
+# created a new group with 'addgroups' to manage user access
+# created new user "dino" within the Docker image and placed the user to "docker" group
+# user's default shell defined as /bin/bash
 RUN <<EOF
-add group docker
-add user -S --shell /bin/bash --ingroup docker vscode
+addgroup -S docker
+adduser -S --shell /bin/bash --ingroup docker dino
 EOF

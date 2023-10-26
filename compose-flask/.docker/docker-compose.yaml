@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: app
+      # build stage set for dev-envs to build the image
+      target: dev-envs
+    stop_signal: SIGINT
+    ports:
+      - '8000:8000'
+    # defining a volume to share data between the host and container
+    # (mapping the Docker socket from host to the container)
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

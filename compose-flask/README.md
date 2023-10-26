@@ -1,6 +1,7 @@
 ## Python/Flask application
 
 Structure:
+
 ```
 .
 ├── compose.yaml
@@ -12,6 +13,7 @@ Structure:
 ```
 
 [_compose.yaml_](compose.yaml)
+
 ```
 services:
   web:
@@ -39,9 +41,10 @@ docker compose up -d
  ✔ Container compose-flask-web-1  Started                                                                                                                    0.0s
  ```
 
- ## Result
+## Result
 
  Listing containers should show only one container running and the port mapping like below:
+
  ```
 $ docker compose ps
 NAME                  IMAGE               COMMAND            SERVICE   CREATED         STATUS         PORTS
@@ -54,15 +57,18 @@ After the application starts open `http://localhost:8000` in your web browser or
 $ curl localhost:8000
 Hello World! This is Flask app
 ```
+
 ## Output screenshot
 
 ![flaskapp](https://github.com/dinomite505/learning_docker/assets/131146683/e1e4ab28-926e-4e62-8034-ab61d281cc31)
 
 To stop and remove containers
+
 ```
 $ docker compose down
 [+] Running 2/2
  ✔ Container compose-flask-web-1  Removed                                                                                                                    0.5s 
  ✔ Network compose-flask_default  Removed
 ```
+
 Good job!

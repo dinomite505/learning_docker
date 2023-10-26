@@ -29,3 +29,35 @@ services:
 ## To deploy with docker compose
 
 ```
+docker compose up -d
+[+] Building 5.7s (11/11) FINISHED                                                                                                                                     docker:default
+  ...
+
+0.0s
+ => => naming to docker.io/library/compose-flask-web                                                                                                         0.0s
+[+] Running 2/2
+ ✔ Network compose-flask_default  Created                                                                                                                    0.2s 
+ ✔ Container compose-flask-web-1  Started                                                                                                                    0.0s
+ ```
+
+ ## Result
+
+ Listing containers should show only one container running and the port mapping like below:
+ ```
+
+$ docker compose ps
+NAME                  IMAGE               COMMAND            SERVICE   CREATED         STATUS         PORTS
+compose-flask-web-1   compose-flask-web   "python3 app.py"   web       5 minutes ago   Up 5 minutes   0.0.0.0:8000->8000/tcp, :::8000->8000/tcp
+```
+
+After the application starts open `http://localhost:8000` in your web browser or run:
+```
+
+$ curl localhost:8000
+Hello World! This is Flask app
+```
+
+To stop and remove containers
+```
+$ docker compose down
+```

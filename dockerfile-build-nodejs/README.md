@@ -1,4 +1,4 @@
-## Build Node.js image with Dockerfile
+## Build an Image from a Dockerfile
 
 The primary goal of this project is to package and distribute a Node.js application within a Docker container. This application is already fully developed, tested, and pre-built, meaning it contains all the necessary dependencies and configurations to run without any issues.
 

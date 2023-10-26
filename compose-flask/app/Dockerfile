@@ -20,10 +20,9 @@ COPY . /app
 ENTRYPOINT ["python3"]
 CMD ["app.py"]
 
-FROM baseImage
+FROM builder as dev-envs
 
 RUN <<EOF
 apk update
 apk add git
 EOF
-

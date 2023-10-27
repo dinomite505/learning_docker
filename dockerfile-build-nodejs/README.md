@@ -137,5 +137,7 @@ Remove the image locally `docker image rm repository_name/testing-node` then, to
 
 Open `localhost` and refresh. Check terminal streams to confirm.
 
-**Clean everything up once you're done**
+<br>
+
+#### **Clean everything up once you're done**
 

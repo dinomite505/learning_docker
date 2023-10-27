@@ -15,8 +15,10 @@ services:
 
   backend:
     build:
+      # when building using Dockerfile located in flask target build stage "dev-envs"
       context: flask
       target: dev-envs
+    # Flask requires SIGINT to shutdown gracefuly. (Compose default is SIGTERM)
     stop_signal: SIGINT
     environment:
       - FLASK_SERVER_PORT=9081

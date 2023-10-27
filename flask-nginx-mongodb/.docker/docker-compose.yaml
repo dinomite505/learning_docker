@@ -6,7 +6,8 @@ services:
     environment:
       -
     command:
-    ports: 80:80
+    ports: 
+      - 80:80
     depends_on:
       - backend
 

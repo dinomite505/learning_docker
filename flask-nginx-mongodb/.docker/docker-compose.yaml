@@ -2,9 +2,10 @@ services:
   web:
     image: nginx
     volumes:
-      - 
-    environment:
       -
+    # nginx config uses this as a variable to set up the reverse proxy  
+    environment:
+      - FLASK_SERVER_ADDR=backend:9081
     command:
     ports: 
       - 80:80

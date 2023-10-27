@@ -116,9 +116,8 @@ Run additional test by pushing, pulling to Docker Hub or by removing your image 
 
 <br>
 
-If you list your images with `docker image ls` you will see your `testnode` image tagged with `latest`.
-We are going to follow `repository:tag` format for our image. 
-You can name your image with `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`:
+If you list your images with `docker image ls` you will see your `testnode` image tagged with `latest`. 
+You can name your image with `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]` so follow `repository:tag` format:
 
 ```
 docker tag testnode repository_name/testing-node

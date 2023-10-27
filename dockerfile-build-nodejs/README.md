@@ -110,6 +110,9 @@ GET /favicon.ico 404 6.763 ms - 970
 ```
 <br>
 
+## Output Screenshot
+![nodeapp](https://github.com/dinomite505/learning_docker/assets/131146683/8952bb9b-565a-4912-a00a-a7aca212e33f)
+
 ## Testing
 
 Run additional test by pushing, pulling to Docker Hub or by removing your image locally and running it again to see how it behaves.

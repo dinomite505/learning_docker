@@ -59,7 +59,6 @@ docker build -t testnode .
 ```
 docker image ls
 ```
-
 <br>
 
 #### Note

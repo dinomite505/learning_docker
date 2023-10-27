@@ -101,7 +101,7 @@ You see Captain Picard? Great!
 
 <br>
 
-Back in the container, you will see GET requests similar to this:
+Back in the container, you will see a stream of GET requests similar to this:
 ```
 GET / 200 38.482 ms - 290
 GET /stylesheets/style.css 200 4.367 ms - 111
@@ -109,4 +109,24 @@ GET /images/picard.gif 200 2.493 ms - 417700
 GET /favicon.ico 404 6.763 ms - 970
 ```
 <br>
+
+## Testing
+
 Run additional test by pushing, pulling to Docker Hub or removing your image locally and running it again to see how it behaves.
+
+<br>
+
+If you list your images with `docker image ls` you will see your `testnode` image tagged with `latest`. You can name your image with `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`:
+    e.g. `docker tag testnode repository_name/testing-node`
+
+Make sure you are logged in with `docker login` before pushing.
+
+Usage: `docker push [OPTIONS] NAME[:TAG]` so in our case we're going to push this image without using `OPTIONS`:
+    e.g. `docker push repository_name/testing-node`
+
+Confirm the push in your Docker Hub and from terminal using `docker image ls`
+
+Remove the image locally `docker image rm repository_name/testing-node` then, to download and run again use `docker container run --rm -p 80:3000 repository_name/testing-node`.
+
+Open `localhost` and refresh. Check terminal streams to confirm.
+

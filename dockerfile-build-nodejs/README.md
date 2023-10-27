@@ -59,7 +59,6 @@ docker build -t testnode .
 ```
 docker image ls
 ```
-<br>
 
 #### Note
 If you decide to make changes to your application code, they won't be automatically reflected in a running Docker container until you **rebuild the image** and recreate the container.

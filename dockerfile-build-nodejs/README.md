@@ -125,7 +125,7 @@ docker tag testnode repository_name/testing-node
 <br>
 
 ##### Note
-Make sure you are logged in with `docker login` **pushing** pushing.
+Make sure you are logged in with `docker login` **before** pushing.
 
 <br>
 

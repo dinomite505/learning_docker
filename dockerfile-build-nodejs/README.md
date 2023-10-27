@@ -95,7 +95,7 @@ docker container run --rm -p 80:3000 testnode
 
 Container is not detached so you can see HTTP access logs entries and it is removed once you exit.
 
-Open `localhost` in your browser to see the app.
+Open your browser and navigate to `localhost` to see the app.
 
 You see Captain Picard? Great!
 
@@ -116,7 +116,7 @@ Run additional test by pushing, pulling to Docker Hub or by removing your image 
 
 <br>
 
-If you list your images with `docker image ls` you will see your `testnode` image tagged with `latest`. <br>
+If you list your images with `docker image ls` you will see your `testnode` image tagged as `latest`. <br>
 You can name your image with `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]` so follow `repository:tag` format:
 
 ```
@@ -133,10 +133,11 @@ Usage: `docker push [OPTIONS] NAME[:TAG]` so in our case we're going to push thi
 ```
 docker push repository_name/testing-node
 ```
-Confirm the push in your Docker Hub and from terminal using `docker image ls`
+Confirm the push on your Docker Hub account, and from terminal use `docker image ls` to verify.
 
 <br>
-Remove the image locally `docker image rm repository_name/testing-node` then, to download and run again use `docker container run --rm -p 80:3000 repository_name/testing-node`.
+
+Remove the image locally `docker image rm repository_name/testing-node` then. then, to download and run it again use `docker container run --rm -p 80:3000 repository_name/testing-node`.
 
 Open `localhost` and refresh. Check terminal streams to confirm.
 

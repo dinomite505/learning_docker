@@ -69,10 +69,12 @@ docker container run --rm -p 80:3000 testnode
 ```
 
 Container is not detached so you can see HTTP access logs entries and it is removed once you exit.
-<br>
+
 Open `localhost` in your browser to see the app.
 
 You see Captain Picard? Great!
+
+<br>
 
 Back in the container, you will see GET requests similar to this:
 ```

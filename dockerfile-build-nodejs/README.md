@@ -112,7 +112,7 @@ GET /favicon.ico 404 6.763 ms - 970
 
 ## Testing
 
-Run additional test by pushing, pulling to Docker Hub or removing your image locally and running it again to see how it behaves.
+Run additional test by pushing, pulling to Docker Hub or by removing your image locally and running it again to see how it behaves.
 
 <br>
 
@@ -129,4 +129,6 @@ Confirm the push in your Docker Hub and from terminal using `docker image ls`
 Remove the image locally `docker image rm repository_name/testing-node` then, to download and run again use `docker container run --rm -p 80:3000 repository_name/testing-node`.
 
 Open `localhost` and refresh. Check terminal streams to confirm.
+
+**Clean everything up once you're done**
 

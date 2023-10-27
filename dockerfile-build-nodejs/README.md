@@ -137,7 +137,7 @@ Confirm the push on your Docker Hub account, and from terminal use `docker image
 
 <br>
 
-Remove the image locally `docker image rm repository_name/testing-node` 
+Remove the image locally `docker image rm repository_name/testing-node`. 
 
 Then, to download and run it again use `docker container run --rm -p 80:3000 repository_name/testing-node`.
 

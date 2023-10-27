@@ -1,0 +1,16 @@
+services:
+  web:
+    image: nginx
+    volumes:
+      - 
+    environment:
+      -
+    command:
+    ports: 80:80
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: flask
+      target: dev-envs

@@ -124,6 +124,7 @@ docker tag testnode repository_name/testing-node
 ```
 <br>
 <br>
+
 Make sure you are logged in with `docker login` before pushing.
 
 Usage: `docker push [OPTIONS] NAME[:TAG]` so in our case we're going to push this image without using `OPTIONS`:

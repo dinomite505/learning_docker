@@ -1,8 +1,9 @@
 services:
   web:
     image: nginx
+    # create a volume, maps nginx.conf file from the host to /tmp/ within the container
     volumes:
-      -
+      - ./nginx/nginx.conf:/tmp/nginx.conf
     # nginx config uses this as a variable to set up the reverse proxy  
     environment:
       - FLASK_SERVER_ADDR=backend:9081

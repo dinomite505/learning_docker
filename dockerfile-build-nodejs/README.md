@@ -131,8 +131,8 @@ Usage: `docker push [OPTIONS] NAME[:TAG]` so in our case we're going to push thi
 docker push repository_name/testing-node
 ```
 Confirm the push in your Docker Hub and from terminal using `docker image ls`
-<br>
 
+<br>
 Remove the image locally `docker image rm repository_name/testing-node` then, to download and run again use `docker container run --rm -p 80:3000 repository_name/testing-node`.
 
 Open `localhost` and refresh. Check terminal streams to confirm.

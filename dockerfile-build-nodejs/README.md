@@ -140,5 +140,5 @@ Open `localhost` and refresh. Check terminal streams to confirm.
 <br>
 
 #### Note 
-**Clean everything up once you're done**
+**Clean everything up once you're done.**
 

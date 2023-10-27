@@ -8,7 +8,29 @@ Pre-pulling **node** and **alpine** images and having them locally can increase 
 docker pull node
 docker pull alpine:3.17
 ```
+## Project Structure
 
+```
+.
+├── bin
+│     └──www
+├── node_modules
+│   └── ...
+├── public
+│    ├── images
+│    └── stylesheets
+├── routes
+│   ├── index.js
+│   └── users.js
+├── views
+│   ├── error.hbs
+│   ├── index.hbs
+│   └── layout.hbs   
+├ app.js
+├ Dockerfile 
+├ README.md
+```
+<br>
 
 ## Dockerfile
 

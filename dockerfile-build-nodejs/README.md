@@ -48,7 +48,7 @@ RUN npm install && npm cache verify
 COPY . .
 CMD ["tini", "node", "./bin/www"]
 ```
-
+<br>
 
 ## Build the image
 

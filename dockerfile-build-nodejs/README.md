@@ -123,9 +123,10 @@ You can name your image with `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]` 
 docker tag testnode repository_name/testing-node
 ```
 <br>
-<br>
 
 Make sure you are logged in with `docker login` before pushing.
+
+<br>
 
 Usage: `docker push [OPTIONS] NAME[:TAG]` so in our case we're going to push this image without using `OPTIONS`:
 

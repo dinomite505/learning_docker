@@ -17,7 +17,7 @@ These are the layers we are building the image on. You can find detailed explana
 ```
 FROM node:21-alpine3.17
 EXPOSE 3000
-RUN apk --update tini
+RUN apk add --update tini
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY package.json package.json

@@ -9,7 +9,7 @@ FROM node:21-alpine3.17
 EXPOSE 3000
 
 # Thid image will use alpine package manager to install 'tini'
-RUN apk update tini
+RUN apk add --update tini
 
 # Create a directory for app files
 RUN mkdir -p /usr/src/app

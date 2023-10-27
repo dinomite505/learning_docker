@@ -1,4 +1,4 @@
-## Python/Flask application
+# Python/Flask Application
 
 Structure:
 
@@ -26,6 +26,7 @@ services:
     ports:
       - '8000:8000'
 ```
+
 
 ## To deploy with docker compose
 
@@ -69,6 +70,4 @@ $ docker compose down
 [+] Running 2/2
  ✔ Container compose-flask-web-1  Removed                                                                                                                    0.5s 
  ✔ Network compose-flask_default  Removed
-```
-
-Good job!
+```

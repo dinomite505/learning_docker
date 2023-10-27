@@ -17,3 +17,8 @@ services:
     stop_signal: SIGINT
     environment:
       - FLASK_SERVER_PORT=9081
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo

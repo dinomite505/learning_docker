@@ -2,7 +2,7 @@
 
 The primary goal of this project is to package and distribute a Node.js application within a Docker container. This application is already fully developed, tested, and pre-built, meaning it contains all the necessary dependencies and configurations to run without any issues.
 
-Pre-pulling **node** and **alpine** images and having them locally can increase efficiency and avoid any potential delays during the Docker image build process. NOTE: You can use any version(tag) of these images. Just make sure you have you specify that in Dockerfile.
+Pre-pulling **node** and **alpine** images and having them locally can increase efficiency and avoid any potential delays during the Docker image build process. NOTE: You can use any version(tag) of these images. Just make sure you specify that in Dockerfile.
 
 ```
 docker pull node
@@ -56,7 +56,11 @@ docker build -t testnode .
  => => writing image sha256:8e2094700e47a07e7c37607a2eef90d758f60e0db099482a926e56401d1  0.0s
  => => naming to docker.io/library/testnode                                              0.0s
 ```
-If you decide to make changes to your app (HTML, styles..) you won't see changes until you rebuild the app.
+```
+docker image ls
+```
+
+If you decide to make changes to your App you won't see them until you rebuild the app.
 
 
 ## Run the image in the container

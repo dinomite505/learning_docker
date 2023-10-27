@@ -108,10 +108,11 @@ GET /stylesheets/style.css 200 4.367 ms - 111
 GET /images/picard.gif 200 2.493 ms - 417700
 GET /favicon.ico 404 6.763 ms - 970
 ```
-<br>
 
 ## Output Screenshot
 ![nodeapp](https://github.com/dinomite505/learning_docker/assets/131146683/8952bb9b-565a-4912-a00a-a7aca212e33f)
+
+<br>
 
 ## Testing
 

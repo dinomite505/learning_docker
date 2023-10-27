@@ -97,7 +97,7 @@ Container is not detached so you can see HTTP access logs entries and it is remo
 
 Open your browser and navigate to `localhost` to see the app.
 
-You see Captain Picard? Great!
+Is Captain Picard applauding you? Great!
 
 <br>
 

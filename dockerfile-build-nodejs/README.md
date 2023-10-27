@@ -82,4 +82,5 @@ GET /stylesheets/style.css 200 4.367 ms - 111
 GET /images/picard.gif 200 2.493 ms - 417700
 GET /favicon.ico 404 6.763 ms - 970
 ```
-
+<br>
+You can also run additional test by pushing, pulling or removing your image and running it again to see how it behaves, 

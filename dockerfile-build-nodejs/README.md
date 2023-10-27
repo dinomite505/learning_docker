@@ -118,12 +118,15 @@ Run additional test by pushing, pulling to Docker Hub or by removing your image 
 
 If you list your images with `docker image ls` you will see your `testnode` image tagged with `latest`. 
 You can name your image with `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`:
+
 e.g. ```
 `docker tag testnode repository_name/testing-node`
 ```
+
 Make sure you are logged in with `docker login` before pushing.
 
 Usage: `docker push [OPTIONS] NAME[:TAG]` so in our case we're going to push this image without using `OPTIONS`:
+
 e.g. ```
 `docker push repository_name/testing-node`
 ```

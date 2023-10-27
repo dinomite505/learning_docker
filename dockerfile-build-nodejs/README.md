@@ -8,7 +8,7 @@ Pre-pulling **node** and **alpine** images and having them locally can increase 
 docker pull node
 docker pull alpine:3.17
 ```
-
+<br>
 
 ## Dockerfile
 
@@ -25,15 +25,14 @@ RUN npm install && npm cache verify
 COPY . .
 CMD ["tini", "node", "./bin/www"]
 ```
-
-
+<br>
 ## Build the image
 
 Make sure you have a valid Dockerfile in the current directory, and the Docker daemon is running for this command to work as expected. Usage: `docker build [OPTIONS] PATH | URL | -`
 ```
 docker build -t testnode .
 ```
-
+<br>
 ### Expected Output:
 ```
 [+] Building 5.7s (12/12) FINISHED                                             docker:default
@@ -62,20 +61,18 @@ docker image ls
 
 If you decide to make changes to your App you won't see them until you rebuild the app.
 
-
+<br>
 ## Run the image in the container
 ```
 docker container run --rm -p 80:3000 testnode
 ```
 
 Container is not detached so you can see HTTP access logs entries and it is removed once you exit.
-
-
+<br>
 Open `localhost` in your browser to see the app.
 
 You see Captain Picard? Great!
-
-
+<br>
 Back in the container, you will see GET requests similar to this:
 ```
 GET / 200 38.482 ms - 290

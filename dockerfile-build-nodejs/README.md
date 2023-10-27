@@ -122,7 +122,7 @@ You can name your image with `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`:
 ```
 docker tag testnode repository_name/testing-node
 ```
-
+<br>
 Make sure you are logged in with `docker login` before pushing.
 
 Usage: `docker push [OPTIONS] NAME[:TAG]` so in our case we're going to push this image without using `OPTIONS`:
@@ -131,6 +131,7 @@ Usage: `docker push [OPTIONS] NAME[:TAG]` so in our case we're going to push thi
 docker push repository_name/testing-node
 ```
 Confirm the push in your Docker Hub and from terminal using `docker image ls`
+<br>
 
 Remove the image locally `docker image rm repository_name/testing-node` then, to download and run again use `docker container run --rm -p 80:3000 repository_name/testing-node`.
 

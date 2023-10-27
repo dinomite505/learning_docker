@@ -120,7 +120,7 @@ If you list your images with `docker image ls` you will see your `testnode` imag
 You can name your image with `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`:
 
 e.g. ```
-`docker tag testnode repository_name/testing-node`
+docker tag testnode repository_name/testing-node
 ```
 
 Make sure you are logged in with `docker login` before pushing.
@@ -128,7 +128,7 @@ Make sure you are logged in with `docker login` before pushing.
 Usage: `docker push [OPTIONS] NAME[:TAG]` so in our case we're going to push this image without using `OPTIONS`:
 
 e.g. ```
-`docker push repository_name/testing-node`
+docker push repository_name/testing-node
 ```
 Confirm the push in your Docker Hub and from terminal using `docker image ls`
 

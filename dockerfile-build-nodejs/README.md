@@ -12,10 +12,14 @@ docker pull alpine:3.17
 
 ```
 .
+├── Dockerfile
+├── README.md
+├── app.js
 ├── bin
-│     └──www
+│     └── www    
 ├── node_modules
 │   └── ...
+├── package.json
 ├── public
 │    ├── images
 │    └── stylesheets
@@ -23,12 +27,9 @@ docker pull alpine:3.17
 │   ├── index.js
 │   └── users.js
 ├── views
-│   ├── error.hbs
-│   ├── index.hbs
-│   └── layout.hbs   
-├ app.js
-├ Dockerfile 
-├ README.md
+    ├── error.hbs
+    ├── index.hbs
+    └── layout.hbs
 ```
 <br>
 

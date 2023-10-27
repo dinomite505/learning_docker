@@ -116,16 +116,17 @@ Run additional test by pushing, pulling to Docker Hub or by removing your image 
 
 <br>
 
-If you list your images with `docker image ls` you will see your `testnode` image tagged with `latest`. You can name your image with `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`:
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g. `docker tag testnode repository_name/testing-node`
+If you list your images with `docker image ls` you will see your `testnode` image tagged with `latest`. 
+You can name your image with `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`:
+e.g. ```
+`docker tag testnode repository_name/testing-node`
 
 Make sure you are logged in with `docker login` before pushing.
 
 Usage: `docker push [OPTIONS] NAME[:TAG]` so in our case we're going to push this image without using `OPTIONS`:
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g. `docker push repository_name/testing-node`
-
+e.g. ```
+`docker push repository_name/testing-node`
+```
 Confirm the push in your Docker Hub and from terminal using `docker image ls`
 
 Remove the image locally `docker image rm repository_name/testing-node` then, to download and run again use `docker container run --rm -p 80:3000 repository_name/testing-node`.

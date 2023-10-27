@@ -12,7 +12,7 @@ docker pull alpine:3.17
 
 ## Dockerfile
 
-These are the layers we are building the image on. You can find detailed explanation for each command in the [_Dockerfile_](Dockerfile)
+These are the layers we are building the image on. You can find detailed explanation for each command in your [_Dockerfile_](Dockerfile)
 
 ```
 FROM node:21-alpine3.17
@@ -88,4 +88,4 @@ GET /images/picard.gif 200 2.493 ms - 417700
 GET /favicon.ico 404 6.763 ms - 970
 ```
 <br>
-Run additional test by pushing, pulling or removing your image and running it again to see how it behaves.
+Run additional test by pushing, pulling to Docker Hub or removing your image locally and running it again to see how it behaves.

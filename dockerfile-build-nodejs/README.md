@@ -2,7 +2,7 @@
 
 The primary goal of this project is to package and distribute a Node.js application within a Docker container. This application is already fully developed, tested, and pre-built, meaning it contains all the necessary dependencies and configurations to run without any issues.
 
-Pre-pulling **node** and **alpine** images and having them locally can increase efficiency and avoid any potential delays during the Docker image build process. Do so with:
+Pre-pulling **node** and **alpine** images and having them locally can increase efficiency and avoid any potential delays during the Docker image build process. NOTE: You can use any version(tag) of these images. Just make sure you have you specify that in Dockerfile.
 
 ```
 docker pull node
@@ -21,7 +21,7 @@ RUN apk --update tini
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 COPY package.json package.json
-RUN npm install && npm install --cache /tmp/empty-cache
+RUN npm install && npm cache verify
 COPY . .
 CMD ["tini", "node", "./bin/www"]
 ```
@@ -68,7 +68,7 @@ Container is not detached so you can see HTTP access logs entries and it is remo
 
 Open `localhost` in your browser to see the app.
 
-**"There is a way out of every box, a solution to every puzzle..."**
+You see Captain Picard? Great!
 
 Back in the container, you will see GET requests similar to this:
 ```

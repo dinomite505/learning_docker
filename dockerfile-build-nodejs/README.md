@@ -29,7 +29,7 @@ CMD ["tini", "node", "./bin/www"]
 
 ## Build the image
 
-Make sure you have a valid Dockerfile in the current directory, and the Docker daemon is running for this command to work as expected.
+Make sure you have a valid Dockerfile in the current directory, and the Docker daemon is running for this command to work as expected. Usage: `docker build [OPTIONS] PATH | URL | -`
 ```
 docker build -t testnode .
 ```

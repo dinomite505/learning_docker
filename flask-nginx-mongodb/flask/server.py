@@ -16,6 +16,7 @@ client = MongoClient("mongo:27017")
 def todo():
     try:
         # Attempts to execute ismaster to check if MongoDB server's available
+        # 'ismaster' checks if client is connected to primary server or secondary (slave) server in replica set.
         client.admin.command('ismaster')
     # Otherwise, app cannot connect to it
     except:

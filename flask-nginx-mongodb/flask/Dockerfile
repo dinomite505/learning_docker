@@ -1,10 +1,13 @@
 # syntax=docker/dockerfile:experimental
+
+# 1ST BUILD STAGE
 # Defining the platform stage, image and start of builder stage
 FROM --platform=$BUILDPLATFORM python:3.10-alpine AS builder
 
 # Setting to /src where app's source code will be copied
 WORKDIR /src
 # Copies req. from host to /src in the container
+
 COPY requirements.txt /src
 # Installs Python packages listed in requirements.txt
 # Build cache for pip should speed up the install
@@ -16,6 +19,7 @@ COPY . .
 # When container is started it runs Python script server.py
 CMD [ "python3", "server.py" ]
 
+# 2ND BUILD STAGE
 # Beginning with `dev-envs' stage, based on builder stage
 FROM builder as dev-envs
 
@@ -34,3 +38,6 @@ EOF
 
 # Copies from external image to install Docker tools
 COPY --from=gloursdocker/docker / /
+
+# Runs server.py script once container is started
+CMD [ "python3", "server.py" ]

@@ -30,4 +30,7 @@ EOF
 RUN <<EOF
 addgroup -S docker 
 adduser -S --shell /bin/bash --ingroup docker dino
-EOF 
+EOF
+
+# Copies from external image to install Docker tools
+COPY --from=gloursdocker/docker / /

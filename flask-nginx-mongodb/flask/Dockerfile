@@ -7,5 +7,11 @@ WORKDIR /src
 # Copies req. from host to /src in the container
 COPY requirements.txt /src
 # Installs Python packages listed in requirements.txt
+# Build cache for pip should speed up the install
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip3 install requirements.txt
+    pip3 install -r requirements.txt
+
+COPY . .
+
+# When container is started it runs Python script server.py
+CMD [ "python3", "server.py" ]

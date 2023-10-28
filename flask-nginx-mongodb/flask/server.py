@@ -8,7 +8,7 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 # Create connection to a MongoDB server, hostname:port
-client = MongoClient("mongo:207017")
+client = MongoClient("mongo:27017")
 
 # Defining a route to Flask app
 @app.route('/')

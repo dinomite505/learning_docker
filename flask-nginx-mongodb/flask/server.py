@@ -24,5 +24,5 @@ def todo():
 
 # When script is run directly, Flask dev-server starts and listens on host and Flask server port
 # Server available on all netowork interfaces. Enabled Flask dev mode (debug)
-if __name__=="__main__":
+if __name__== "__main__":
     app.run(host='0.0.0.0', port=os.environ.get("FLASK_SERVER.PORT", 9090), debug=True)

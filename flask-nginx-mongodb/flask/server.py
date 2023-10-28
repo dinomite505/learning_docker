@@ -21,3 +21,7 @@ def todo():
     except:
         return "Server is not available"
     return "Hello from MongoDB client"
+
+# When script is run directly, Flask dev-server starts and listens on host and Flask server port
+if __name__=="__main__":
+    app.run(host='0.0.0.0', port=os.environ("FLASK_SERVER.PORT", 9090))

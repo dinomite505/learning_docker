@@ -7,7 +7,8 @@ services:
     # nginx config uses this as a variable to set up the reverse proxy  
     environment:
       - FLASK_SERVER_ADDR=backend:9081
-    command:
+    # variable substitution on config file; reading /tmp.. and writing the result to /etc..  
+    command: /bin/bash -c "envsubst" < /tmp/nginx.conf > /etc/nginx/conf.d/default.conf
     ports: 
       - 80:80
     depends_on:

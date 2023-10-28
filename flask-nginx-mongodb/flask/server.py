@@ -10,3 +10,4 @@ app = Flask(__name__)
 # Create connection to a MongoDB server, hostname:port
 client = MongoClient("mongo:207017")
 
+

@@ -15,7 +15,9 @@ client = MongoClient("mongo:207017")
 # From root URL execute todo
 def todo():
     try:
-        client.admin('ismaster')
+        # Attempts to execute ismaster to check if MongoDB server's available
+        client.admin.command('ismaster')
+    # Otherwise, app cannot connect to it
     except:
-        return: "Server is not available"
+        return "Server is not available"
     return "Hello from MongoDB client"

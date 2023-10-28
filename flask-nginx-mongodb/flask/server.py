@@ -24,6 +24,6 @@ def todo():
     return "Hello from MongoDB client!\n" # makes it more readable 
 
 # When script is run directly, Flask dev-server starts and listens on host and Flask server port
-# Server available on all network interfaces. Enabled Flask dev mode (debug)
+# Server available on all network interfaces. Enabled Flask dev mode (debug=True)
 if __name__== "__main__":
     app.run(host='0.0.0.0', port=os.environ.get("FLASK_SERVER.PORT", 9090), debug=True)

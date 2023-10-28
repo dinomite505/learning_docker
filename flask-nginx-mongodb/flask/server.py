@@ -20,7 +20,7 @@ def todo():
     # Otherwise, app cannot connect to it
     except:
         return "Server is not available"
-    return "Hello from MongoDB client"
+    return "Hello from MongoDB client!\n" # makes it more readable 
 
 # When script is run directly, Flask dev-server starts and listens on host and Flask server port
 # Server available on all netowork interfaces. Enabled Flask dev mode (debug)

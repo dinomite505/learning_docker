@@ -15,3 +15,19 @@ COPY . .
 
 # When container is started it runs Python script server.py
 CMD [ "python3", "server.py" ]
+
+# Beginning with `dev-envs' stage, based on builder stage
+FROM builder as dev-envs
+
+# Updates Alpine package manager and installs git
+RUN <<EOF
+apk update
+apk add git
+EOF
+
+# Creates a group and creates user 'dino' and assigns it to that group
+# (-S system group) = lower GID and no password in /etc/group
+RUN <<EOF
+addgroup -S docker 
+adduser -S --shell /bin/bash --ingroup docker dino
+EOF 

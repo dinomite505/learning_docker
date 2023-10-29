@@ -10,9 +10,9 @@ WORKDIR /src
 
 COPY requirements.txt /src
 # Installs Python packages listed in requirements.txt
-# Build cache for pip should speed up the install
+# Instruct pip to install packages without using a cache directory (avoid use of cache directory with pip)
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip3 install -r requirements.txt
+    pip3 install --no-cache-dir -r requirements.txt
 
 COPY . .
 
@@ -24,9 +24,11 @@ CMD [ "python3", "server.py" ]
 FROM builder as dev-envs
 
 # Updates Alpine package manager and installs git
+# Versions after a package name 'apk add <package=version>', '--no-cache' to prevent caching of downloaded packages during installation
+# Remove /var/cache/apk to reduce image size (helps with build process)
 RUN <<EOF
-apk update
-apk add git
+apk add --no-cache git=2.42.0
+rm -rf /var/cache/apk/*
 EOF
 
 # Creates a group and creates user 'dino' and assigns it to that group

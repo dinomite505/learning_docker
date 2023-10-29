@@ -2,12 +2,10 @@
 
 #!/usr/bin/env python
 
-# Importing pymongo Python driver and Flask class
-# Third-party imports should come before standard library imports 
+# Standard library import placed before third party-import
+import os
 from pymongo import MongoClient
 from flask import Flask
-import os 
-
 
 app = Flask(__name__)
 
@@ -19,8 +17,8 @@ client = MongoClient("mongo:27017")
 # From root URL execute todo
 def todo():
     """This function will attempt to execute 'ismaster' to check if MongoDB server is available and
-    itf the client is connected to primary (master) or secondary (slave) server in replica set. If an exception
-    is raised in the 'try' block it is caught by 'except' block"""
+    if the client is connected to primary (master) or secondary (slave) server in replica set. If an 
+    exception is raised in the 'try' block it is caught by 'except' block"""
     try:
         client.admin.command('ismaster')
     except Exception as e:

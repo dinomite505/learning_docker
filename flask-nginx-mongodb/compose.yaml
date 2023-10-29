@@ -14,7 +14,7 @@ services:
   backend:
     build:
       context: flask
-      dockerfile: builder
+      target: builder
     # flask requires SIGINT to stop gracefully
     stop_signal: SIGINT
     # flask application listens on

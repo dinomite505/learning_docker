@@ -17,7 +17,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 COPY . .
 
 # When container is started it runs Python script server.py
-CMD [ "python3", "server.py" ]
+CMD ["python3", "server.py"]
 
 # 2ND BUILD STAGE
 # Beginning with `dev-envs' stage, based on builder stage
@@ -42,4 +42,4 @@ EOF
 COPY --from=gloursdocker/docker / /
 
 # Runs server.py script once container is started
-CMD [ "python3", "server.py" ]
+CMD ["python3", "server.py"]

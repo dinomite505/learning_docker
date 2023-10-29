@@ -1,3 +1,5 @@
+"""This module contains a Flask app that connects to a MongoDB server."""
+
 #!/usr/bin/env python
 import os
 
@@ -16,12 +18,12 @@ client = MongoClient("mongo:27017")
 def todo():
     try:
         # Attempts to execute ismaster to check if MongoDB server's available
-        # 'ismaster' checks if client is connected to primary server or secondary (slave) server in replica set.
+        # checks if client is connected to primary or secondary server in replica set.
         client.admin.command('ismaster')
     # Otherwise, app cannot connect to it
     except:
         return "Server is not available"
-    return "Hello from MongoDB client!\n" # makes it more readable 
+    return "Hello from MongoDB client!\n" # makes it more readable
 
 # When script is run directly, Flask dev-server starts and listens on host and Flask server port
 # Server available on all network interfaces. Enabled Flask dev mode (debug=True)

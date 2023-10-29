@@ -23,7 +23,7 @@ def todo():
     try:
         client.admin.command('ismaster')
     except pymongo.errors.PyMongoError as e:
-        return f"Server is not available: {e}".format(e)
+        return f"Server is not available: {e}"
     return "Hello from MongoDB client!\n"
 
 # When script is run directly, Flask dev-server starts and listens on host and Flask server port

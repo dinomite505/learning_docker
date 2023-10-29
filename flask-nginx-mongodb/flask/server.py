@@ -3,8 +3,8 @@
 #!/usr/bin/env python
 
 # Standard library import placed before third party-import
-import pymongo
 import os
+import pymongo
 from pymongo import MongoClient
 from flask import Flask
 
@@ -23,7 +23,7 @@ def todo():
     try:
         client.admin.command('ismaster')
     except pymongo.errors.PyMongoError as e:
-        return "Server is not available: {}".format(e)
+        return f"Server is not available: {e}".format(e)
     return "Hello from MongoDB client!\n"
 
 # When script is run directly, Flask dev-server starts and listens on host and Flask server port

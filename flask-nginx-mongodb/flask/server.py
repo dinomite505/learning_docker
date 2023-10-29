@@ -17,6 +17,8 @@ client = MongoClient("mongo:27017")
 @app.route('/')
 # From root URL execute todo
 def todo():
+    """This function will attempt to execute 'ismaster' to check if MongoDB server is available and
+    itf the client is connected to primary (master) or secondary (slave) server in replica set."""
     try:
         # Attempts to execute ismaster to check if MongoDB server's available
         # checks if client is connected to primary or secondary server in replica set.
@@ -29,4 +31,4 @@ def todo():
 # When script is run directly, Flask dev-server starts and listens on host and Flask server port
 # Server available on all network interfaces. Enabled Flask dev mode (debug=True)
 if __name__== "__main__":
-    app.run(host='0.0.0.0', port=os.environ.get("FLASK_SERVER.PORT", 9090), debug=True)
+    app.run(host='0.0.0.0', port=os.environ.get("FLASK_SERVER_PORT", 9090), debug=True)

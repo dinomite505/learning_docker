@@ -10,7 +10,7 @@ WORKDIR /src
 COPY requirements.txt /src
 # Installs Python packages listed in requirements.txt
 RUN --mount=type=cache,target=/root/.cache/pip \
-    pip3 install -r requirements.txt
+    pip3 install --no-cache -r requirements.txt
 
 COPY . .
 

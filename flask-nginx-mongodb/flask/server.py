@@ -1,11 +1,12 @@
 """This module contains a Flask app that connects to a MongoDB server."""
 
 #!/usr/bin/env python
-import os
-
-# Importing flask class and pymongo Python driver
-from flask import Flask
+# Importing pymongo Python driver and Flask class
+# Third-party imports should come before standard library imports 
 from pymongo import MongoClient
+from flask import Flask
+import os 
+
 
 app = Flask(__name__)
 

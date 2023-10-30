@@ -7,16 +7,20 @@ In this assignment we will be running multiple different containers, create a cu
 ## Assignment info
 <br>
 
-* Run three containers (Nginx, Apache and MySQL) using corresponding Docker images
-    * Containers should run in the background (detached)
-    * Name the containers
-    * Assign the ports correctly to each of them
-    * Check if all containers are created
-    * MySQL needs to have environment variable set
-* Create a custom network and connect each containers to it (this can be done upon container creation or as a separate task)
-* Inspect your custom network to see if all containers are assigned to it
-* Test the ports of all three containers (from terminal and in browser)
-* Stop and remove containers, confirm it and remove the images if needed
+- [] Run three containers (Nginx, Apache and MySQL) using corresponding Docker images
+    - [] Containers should run in the background (detached)
+    - [] Name the containers
+    - [] Assign the ports correctly to each of them
+    - [] Check if all containers are created
+    - [] MySQL needs to have environment variable set
+- [] Create a custom network 
+    - [] Connect that each container is connected to it
+- [] Inspect your custom network to see if all containers are assigned to it
+- [] Test the ports of all three containers (from terminal and in browser)
+- [] Clean Up!
+    - [] Stop and remove containers
+    - [] Confirm that containers are removed
+    - [] Remove the images and network if needed
 
 <br>
 

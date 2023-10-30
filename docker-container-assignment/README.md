@@ -45,13 +45,14 @@ docker container run -d --name db -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes
 `docker container run` create and starts a new Docker container from a specified image.
 <br>
 
-`-d (or --detach)` option(flag) runs container in detached mode and it is **running in the background** which means you can continue using your terminal without being tied to the container's output. Upon creatin in detached mode you will get a unique container ID. If you don't specify `-d` your container **will run in the foreground** and you will see container's STDOUT and STDERR streams. To exit the container running in foreground use `CTRL+C`.
+`-d (or --detach)` option(flag) runs container in detached mode and it is **running in the background** which means you can continue using your terminal without being tied to the container's output. Upon creating in detached mode you will get a unique container ID. If you don't specify `-d` your container **will run in the foreground** and you will see container's `STDOUT` and `STDERR` streams. To exit the container running in foreground use `CTRL+C`.
 <br>
 
 `--name <name>` assigns a name to the container. If you don't specify a containers name upon creation, one will be assigned to it automatically by Docker.
 <br>
 
-`-p <port>` part exposes our local e.g. port 80 on our host( local machine) and sends all traffic from it to executable running inside that container on port 80 (routes the traffic to the container IP on port 80) allowing external communication with services running inside the container. Docker publishing format is `<public_port:container_port>`. 
+`-p <port>` part exposes our local e.g. port 80 on our host( local machine) and sends all traffic from it to executable running inside that container on port 80 (routes the traffic to the container IP on port 80) allowing external communication with services running inside the container. Docker publishing format is `<public_port:container_port>`.Problem occur when multiple services are running on the same public host port, not in multiple containers, because each container gets its own internal IP behind NAT, so the ports won't conflict across two container network interfaces **(NUMBER ON THE LEFT MUST BE DIFFERENT)**.
+
 <br>
 
 `-e (or --env) MYSQL_RANDOM_ROOT_PASSWORD=yes mysql` when you are running MySQL container it is a good practice to set the environment variable to instruct MySQL to generate a root password during its initialization. 
@@ -110,6 +111,10 @@ This command will create our new custom network and if you list your networks wi
 <br>
 
 ## Connecting and Disconnecting Containers to/from Custom Networks
+```
+docker network connect - dynamically creates a NIC in a container on an existing virtual network.
+docker network disconnect - dynamically removes a NIC from a container on a specific virtual network
+```
 Next, we will use `docker container ls` to list our containers.
 <br>
 
@@ -124,7 +129,7 @@ abdbbdeea6c6   mysql     "docker-entrypoint.s…"   About a minute ago   Up Abou
 <br>
 
 When you want to connect your container to the specific network you can use either their name or ID's. **Note:** You can type in first couple of characters from container's ID, just so it's unique.
-**USAGE:**`docker network connect <network_name_or_ID> <container_name_or_ID>`
+**USAGE:**`docker network connect <network_name_or_ID>`
 <br>
 
 ```
@@ -187,13 +192,17 @@ From the output we see the default welcome page of the Nginx web server. It indi
 <br>
 
 INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE
-### Apache HTTPD
+### Apache (HTTPD)
 ```
 $ curl localhost:8080
 
 <html><body><h1>It works!</h1></body></html>
 ```
+Positive output from Apache server too..
+<br>
 
+INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE
+### MySQL
 
 
 

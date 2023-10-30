@@ -21,8 +21,6 @@ In this assignment we will be running multiple different containers, create a cu
 
 ## Running containers
 
-<br>
-
 #### **Nginx**
 ```
 docker container run -d --name proxy -p 80:80 nginx

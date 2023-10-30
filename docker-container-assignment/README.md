@@ -105,7 +105,7 @@ We will focus on creating our own custom network for our three containers.
 ```
 docker network create my_app_net
 ```
-This command will create our new custom network and if you list your networks you will see it uses a *bridge driver*. `Network drivers` are built-in or 3rd-party extensions that give you virtual network features.
+This command will create our new custom network and if you list your networks with `docker network ls` you will see it uses a *bridge driver*. `Network drivers` are built-in or 3rd-party extensions that give you virtual network features.
 <br>
 <br>
 
@@ -122,6 +122,22 @@ abdbbdeea6c6   mysql     "docker-entrypoint.s…"   About a minute ago   Up Abou
 ```
 
 When you want to connect your container to the specific network you can use either their name or ID's. **Note:** You can type in first couple of characters from container's ID, just so it's unique.
+**USAGE:**`docker network connect <network_name_or_ID> <container_name_or_ID>`
+```
+docker network connect my_app_net proxy
+```
+```
+docker network connect my_app_net webserver
+```
+```
+docker network connect my_app_net db
+```
+
+
+
+
+
+
 
 
 docker container top

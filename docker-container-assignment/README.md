@@ -78,6 +78,7 @@ Host network gains performance by skipping virtual networks and attaches the con
 ### --network none
 This option is used to completely disable networking for a container. If connected to it, the container has no network connectivity, it cannot communicate with the host, other containers or external networks. This is useful for scenarios where network access is not required and in security-sensitive cases where network must be restricted.
 <br>
+<br>
 
 **To list** your networks:
 ```
@@ -107,9 +108,17 @@ docker network create my_app_net
 This command will create our new custom network and if you list your networks you will see it uses a `bridge driver`. **Network drivers** are built-in or 3rd-party extensions that give you virtual network features.
 <br>
 
+## Connecting and Dissconecting Containers to Custom Networks
+Next, we will use `docker container ls` to list our containers.
+<br>
 
-
-
+```
+$ docker container ls
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS                                                  NAMES
+c88b044717d1   nginx     "/docker-entrypoint.…"   28 seconds ago       Up 27 seconds       0.0.0.0:80->80/tcp, :::80->80/tcp                      proxy
+edab2d7a9814   httpd     "httpd-foreground"       45 seconds ago       Up 44 seconds       0.0.0.0:8080->80/tcp, :::8080->80/tcp                  webserver
+abdbbdeea6c6   mysql     "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   db
+```
 
 
 

@@ -23,7 +23,7 @@ In this assignment we will be running multiple different containers, create a cu
 
 <br>
 
-**Nginx**
+#### **Nginx**
 ```
 docker container run -d --name proxy -p 80:80 nginx
 ```
@@ -43,5 +43,10 @@ docker container run -d --name proxy -p 80:80 nginx
 <br>
 <br>
 
-**Apache (HTTPD)**
+#### **Apache (HTTPD)**
 ```
+docker container run -d --name webserver -p 8080:80 httpd
+```
+<br>
+
+#### **MySQL**

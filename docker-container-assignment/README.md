@@ -56,7 +56,7 @@ docker container run -d --name db -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes
 `--name <name>` assigns a name to the container. If you don't specify a containers name upon creation, one will be assigned to it automatically by Docker.
 <br>
 
-`-p <port>` part exposes our local e.g. port 80 on our host( local machine) and sends all traffic from it to executable running inside that container on port 80 (routes the traffic to the container IP on port 80) allowing external communication with services running inside the container. Docker publishing format is `<public_port:container_port>`.Problem occur when multiple services are running on the same public host port, not in multiple containers, because each container gets its own internal IP behind NAT, so the ports won't conflict across two container network interfaces **(NUMBER ON THE LEFT MUST BE DIFFERENT)**.
+`-p <port>` part exposes our local e.g. port 80 on our host( local machine) and sends all traffic from it to executable running inside that container on port 80 (routes the traffic to the container IP on port 80) allowing external communication with services running inside the container. Docker publishing format is `<public_port:container_port>`.Problem occur when multiple services are running on the same public host port, not in multiple containers, because each container gets its own internal IP behind NAT, so the ports won't conflict across two container network interfaces ❗**(NUMBER ON THE LEFT MUST BE DIFFERENT)**❗.
 
 <br>
 

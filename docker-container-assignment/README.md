@@ -183,8 +183,16 @@ Commercial support is available at
 </body>
 </html>
 ```
+From the output we see the default welcome page of the Nginx web server. It indicates that Nginx is running and properly configured within our container. You can also open `localhost` in our web browser to check.
+<br>
 
+INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE
+### Apache HTTPD
+```
+$ curl localhost:8080
 
+<html><body><h1>It works!</h1></body></html>
+```
 
 
 

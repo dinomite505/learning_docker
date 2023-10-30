@@ -99,7 +99,7 @@ Upon the creation of our containers we could've create a new container, and new 
 ```
 docker container run -d --name proxy -p 80:80 --network my_app_net
 ```
-We will focus on creating our own custom network for our three containers.
+We will focus on creating our own custom network for our three containers:
 <br>
 
 ```
@@ -120,6 +120,8 @@ c88b044717d1   nginx     "/docker-entrypoint.…"   28 seconds ago       Up 27 s
 edab2d7a9814   httpd     "httpd-foreground"       45 seconds ago       Up 44 seconds       0.0.0.0:8080->80/tcp, :::8080->80/tcp                  webserver
 abdbbdeea6c6   mysql     "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   db
 ```
+
+<br>
 
 When you want to connect your container to the specific network you can use either their name or ID's. **Note:** You can type in first couple of characters from container's ID, just so it's unique.
 **USAGE:**`docker network connect <network_name_or_ID> <container_name_or_ID>`

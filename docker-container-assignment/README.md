@@ -160,6 +160,7 @@ docker container inspect <container_ID>
 ### Nginx
 ```
 $ curl localhost
+
 <!DOCTYPE html>
 <html>
 <head>

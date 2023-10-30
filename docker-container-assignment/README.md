@@ -51,7 +51,7 @@ docker container run -d --name db -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes
 `--name <name>` assigns a name to the container. If you don't specify a containers name upon creation, one will be assigned to it automatically by Docker.
 <br>
 
-`-p <port>` part exposes our local port 80 on our host( local machine) and sends all traffic from it to executable running inside that container on port 80 (routes the traffic to the container IP on port 80). DOcker publishing format is `<public_port:container_port>`. 
+`-p <port>` part exposes our local e.g. port 80 on our host( local machine) and sends all traffic from it to executable running inside that container on port 80 (routes the traffic to the container IP on port 80) allowing external communication with services running inside the container. Docker publishing format is `<public_port:container_port>`. 
 <br>
 
 `-e (or --env) MYSQL_RANDOM_ROOT_PASSWORD=yes mysql` when you are running MySQL container it is a good practice to set the environment variable to instruct MySQL to generate a root password during its initialization. 
@@ -63,13 +63,24 @@ When you open logs, locate `GENERATED ROOT PASSWORD` section to see your MySQL p
 
 You can also use `-e MYSQL_ALLOW_EMPTY_PASSWORD=yes` allowing to start MySQL container with an empty root password (not recommended for production environments) or `-e MYSQL_ROOT_PASSWORD=my_secret_password` to set a specific password of your choice.
 <br>
+<br>
 
 ## Docker Networks
 
+When we start a new container it is automatically assigned to the default virtual `bridge` network. Each container within bridge network gets its own IP address and they use Network Address Translation (NAT) configuration that maps container IP addresses to the host machine's IP address. Bridge network brings **isolation** from the host and other containers and container's **inter-communication**.
+<br>
 
-
-
-
+To list your networks use:
+```
+docker network ls
+```
+#### Output
+```
+NETWORK ID     NAME      DRIVER    SCOPE
+623f161289a7   bridge    bridge    local
+8ff3c28c9add   host      host      local
+2b25473ca5bc   none      null      local
+```
 
 
 

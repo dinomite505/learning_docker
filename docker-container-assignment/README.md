@@ -25,6 +25,23 @@ In this assignment we will be running multiple different containers, create a cu
 ```
 docker container run -d --name proxy -p 80:80 nginx
 ```
+<br>
+
+
+#### **Apache (HTTPD)**
+```
+docker container run -d --name webserver -p 8080:80 httpd
+```
+<br>
+
+#### **MySQL**
+
+
+
+
+
+
+
 *Explanation*
 <br>
 
@@ -38,13 +55,3 @@ docker container run -d --name proxy -p 80:80 nginx
 <br>
 
 `-p 80:80` maps port 80 from the host to port 80 in the container allowing incoming request to the host's port to be directed to container's port
-<br>
-<br>
-
-#### **Apache (HTTPD)**
-```
-docker container run -d --name webserver -p 8080:80 httpd
-```
-<br>
-
-#### **MySQL**

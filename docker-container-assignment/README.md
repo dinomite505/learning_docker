@@ -4,7 +4,7 @@ In this assignment we will be running multiple different containers, create a cu
 
 <br>
 
-## Assignment info
+## Assignment info :clipboard:
 <br>
 
 * Run three containers (Nginx, Apache and MySQL) keeping the following in mind:

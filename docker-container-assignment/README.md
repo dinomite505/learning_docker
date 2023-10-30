@@ -155,8 +155,6 @@ docker container inspect <container_ID>
 <br>
 
 ## Testing Container Ports
-<br>
-
 ### Nginx
 ```
 $ curl localhost

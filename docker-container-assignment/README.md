@@ -1,6 +1,6 @@
 # Run and Test Containers
 
-In this assignment we will be running multiple different containers, create a custom network and connect those containers to it, test their connection and clean everything up. We will be using Nginx, Apache and MySQL images for our containers.
+In this assignment we will be running multiple different containers, create a custom network and connect those containers to it, test their connection and clean everything up. We will be using Nginx, Apache and MySQL images for our containers. This practice will give you insight to essential Docker commands and how containers work in general.
 
 <br>
 
@@ -42,16 +42,16 @@ docker container run -d --name db -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes
 *Explanation*
 <br>
 
-`docker container run` runs a new Docker container
+`docker container run` create and starts a new Docker container from a specified image.
 <br>
 
-`-d` option(flag) runs container in detached mode 
+`-d (or --detach)` option(flag) runs container in detached mode and it is **running in the background** which means you can continue using your terminal without being tied to the container's output. Upon creatin in detached mode you will get a unique container ID. If you don't specify `-d` your container **will run in the foreground** and you will see container's STDOUT and STDERR streams. To exit the container running in foreground use `CTRL+C`.
 <br>
 
-`--name <name>` assigns a name to the container
+`--name <name>` assigns a name to the container. If you don't specify a containers name upon creation, one will be assigned to it automatically by Docker.
 <br>
 
-`-p <port>` maps the assigned port from the host to assigned port in the container allowing incoming request to the host's port to be directed to container's port
+`-p <port>` part exposes our local port 80 on our host( local machine) and sends all traffic from it to executable running inside that container on port 80 (routes the traffic to the container IP on port 80). DOcker publishing format is `<public_port:container_port>`. 
 <br>
 
 `-e (or --env) MYSQL_RANDOM_ROOT_PASSWORD=yes mysql` when you are running MySQL container it is a good practice to set the environment variable to instruct MySQL to generate a root password during its initialization. 
@@ -62,3 +62,16 @@ When you open logs, locate `GENERATED ROOT PASSWORD` section to see your MySQL p
 <br>
 
 You can also use `-e MYSQL_ALLOW_EMPTY_PASSWORD=yes` allowing to start MySQL container with an empty root password (not recommended for production environments) or `-e MYSQL_ROOT_PASSWORD=my_secret_password` to set a specific password of your choice.
+<br>
+
+## Docker Networks
+
+
+
+
+
+
+
+
+
+docker container top

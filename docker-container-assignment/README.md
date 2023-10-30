@@ -24,6 +24,7 @@ In this assignment we will be running multiple different containers, create a cu
 
 <br>
 
+- - - -
 ## Creating and Starting Containers
 
 ### **Nginx**
@@ -71,6 +72,7 @@ You can also use `-e MYSQL_ALLOW_EMPTY_PASSWORD=yes` allowing to start MySQL con
 <br>
 <br>
 
+- - - -
 ## Docker Networks
 
 ### --network bridge
@@ -114,6 +116,7 @@ docker network create my_app_net
 This command will create our new custom network and if you list your networks with `docker network ls` you will see it uses a *bridge driver*. `Network drivers` are built-in or 3rd-party extensions that give you virtual network features.
 <br>
 <br>
+- - - -
 
 ## Connecting and Disconnecting Containers to/from Custom Networks
 ```

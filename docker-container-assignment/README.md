@@ -15,7 +15,7 @@ In this assignment we will be running multiple different containers, create a cu
     * MySQL needs to have environment variable set
 * Create a custom network and connect each containers to it (this can be done upon container creation or as a separate task)
 * Inspect your custom network to see if all containers are assigned to it
-* Test the ports of all three containers
+* Test the ports of all three containers (from terminal and in browser)
 * Stop and remove containers, confirm it and remove the images if needed
 
 <br>

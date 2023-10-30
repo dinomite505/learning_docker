@@ -19,19 +19,19 @@ In this assignment we will be running multiple different containers, create a cu
 
 <br>
 
-## Running containers
+## Creating and Starting Containers
 
-#### **Nginx**
+### **Nginx**
 ```
 docker container run -d --name proxy -p 80:80 nginx
 ```
 
-#### **Apache (HTTPD)**
+### **Apache (HTTPD)**
 ```
 docker container run -d --name webserver -p 8080:80 httpd
 ```
 
-#### **MySQL**
+### **MySQL**
 ```
 docker container run -d --name db -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
 ```
@@ -67,10 +67,19 @@ You can also use `-e MYSQL_ALLOW_EMPTY_PASSWORD=yes` allowing to start MySQL con
 
 ## Docker Networks
 
-When we start a new container it is automatically assigned to the default virtual `bridge` network. Each container within bridge network gets its own IP address and they use Network Address Translation (NAT) configuration that maps container IP addresses to the host machine's IP address. Bridge network brings **isolation** from the host and other containers and container's **inter-communication**.
+### --network bridge
+When we start a new container, and don't specify the network, it will automatically use the default virtual `bridge` network. Each container within bridge network gets its own IP address and they use Network Address Translation (NAT) configuration that maps container IP addresses to the host machine's IP address. Bridge network brings **isolation** from the host and other containers and container's **inter-communication**.
 <br>
 
-To list your networks use:
+### --network host
+Host network gains performance by skipping virtual networks and attaches the container **directly to the host interface**, rather than creating a separate network for the container. This means that the container shares the same network stack as the host machine making the container's network interface and ports directly accessible on the host's network. This **sacrifices security** of container model (prevents the security boundaries of the containerization from protecting the interface of that container).
+<br>
+
+### --network none
+This option is used to completely disable networking for a container. If connected to it, the container has no network connectivity, it cannot communicate with the host, other containers or external networks. This is useful for scenarios where network access is not required and in security-sensitive cases where network must be restricted.
+<br>
+
+**To list** your networks:
 ```
 docker network ls
 ```
@@ -81,6 +90,25 @@ NETWORK ID     NAME      DRIVER    SCOPE
 8ff3c28c9add   host      host      local
 2b25473ca5bc   none      null      local
 ```
+<br>
+
+We will focus on creating our own custom network for our three containers.
+<br>
+
+```
+docker network create my_app_net
+```
+This command will create our new custom network and if you list your networks you will see it uses a `bridge driver`. **Network drivers** are built-in or 3rd-party extensions that give you virtual network features.
+<br>
+
+Upon the creation of our containers we could've create a new container, and new network, and assign this container to it in one command like this:
+<br>
+
+```
+docker container run -d --name proxy -p 80:80 --network my_app_net
+```
+
+
 
 
 

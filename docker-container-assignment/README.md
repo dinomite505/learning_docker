@@ -137,6 +137,36 @@ docker network connect my_app_net webserver
 docker network connect my_app_net db
 ```
 
+<br>
+
+To confirm you connected your containers to `my_app_net` you can use:
+
+```
+docker container inspect <container_ID>
+```
+to see to which network is your specific container connected to
+<br>
+
+or
+
+<br>
+```
+docker network inspect my_app_net
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

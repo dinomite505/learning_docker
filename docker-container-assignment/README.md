@@ -28,6 +28,8 @@ In this assignment we will be running multiple different containers, create a cu
 docker container run -d --name proxy -p 80:80 nginx
 ```
 *Explanation*
+<br>
+
 `docker container run` runs a new Docker container
 <br>
 
@@ -37,3 +39,6 @@ docker container run -d --name proxy -p 80:80 nginx
 `-p 80:80` maps port 80 from the host to port 80 in the container allowing incoming request to the host's port to be directed to container's port
 <br>
 <br>
+
+**Apache (HTTPD)**
+`````

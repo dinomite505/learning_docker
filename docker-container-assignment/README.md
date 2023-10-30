@@ -92,6 +92,12 @@ NETWORK ID     NAME      DRIVER    SCOPE
 ```
 <br>
 
+Upon the creation of our containers we could've create a new container, and new network, and assign this container to it in one command like this:
+<br>
+
+```
+docker container run -d --name proxy -p 80:80 --network my_app_net
+```
 We will focus on creating our own custom network for our three containers.
 <br>
 
@@ -101,12 +107,6 @@ docker network create my_app_net
 This command will create our new custom network and if you list your networks you will see it uses a `bridge driver`. **Network drivers** are built-in or 3rd-party extensions that give you virtual network features.
 <br>
 
-Upon the creation of our containers we could've create a new container, and new network, and assign this container to it in one command like this:
-<br>
-
-```
-docker container run -d --name proxy -p 80:80 --network my_app_net
-```
 
 
 

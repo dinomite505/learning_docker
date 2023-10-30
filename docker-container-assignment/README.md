@@ -120,6 +120,7 @@ edab2d7a9814   httpd     "httpd-foreground"       45 seconds ago       Up 44 sec
 abdbbdeea6c6   mysql     "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3306->3306/tcp, :::3306->3306/tcp, 33060/tcp   db
 ```
 
+When you want to connect your container to the specific network you can use either their name or ID's. **Note:** You can type in first couple of characters from container's ID, just so it's unique.
 
 
 docker container top

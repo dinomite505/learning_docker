@@ -7,10 +7,10 @@ In this assignment we will be running multiple different containers, create a cu
 ## Assignment info
 <br>
 
-1. Run a Nginx, Apache and MySQL server (MySQL needs to have environment variable set)
-2. Assign the appropriate ports to each of them
-3. Containers should run in the background (detached)
-4. Name the containers
+1. Run three containers (Nginx, Apache and MySQL) using corresponding Docker images (MySQL needs to have environment variable set)
+2. Containers should run in the background (detached)
+3. Name the containers
+4. Assign the appropriate ports to each of them
 5. Create a custom network and assign each containers to it (this can be done upon container creation or as a separate task)
 6. Check if all containers are created
 7. Inspect your custom network to see if all containers are assigned to it
@@ -36,9 +36,12 @@ docker container run -d --name proxy -p 80:80 nginx
 `-d` option(flag) runs container in detached mode 
 <br>
 
+`--name proxy` assigns a name to the container
+<br>
+
 `-p 80:80` maps port 80 from the host to port 80 in the container allowing incoming request to the host's port to be directed to container's port
 <br>
 <br>
 
 **Apache (HTTPD)**
-`````
+```

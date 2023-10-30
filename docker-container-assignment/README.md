@@ -149,8 +149,6 @@ docker network inspect my_app_net
 
 or to see to which network is your specific container connected to:
 
-<br>
-
 ```
 docker container inspect <container_ID>
 ```

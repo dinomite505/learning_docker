@@ -9,7 +9,7 @@ In this assignment we will be running multiple different containers, create a cu
 
 - [] Run three containers (Nginx, Apache and MySQL) using corresponding Docker images
     - [] Containers should run in the background (detached)
-    - [] Name the containers
+    - [x] Name the containers
     - [] Assign the ports correctly to each of them
     - [] Check if all containers are created
     - [] MySQL needs to have environment variable set

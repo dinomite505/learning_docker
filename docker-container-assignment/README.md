@@ -125,6 +125,8 @@ abdbbdeea6c6   mysql     "docker-entrypoint.s…"   About a minute ago   Up Abou
 
 When you want to connect your container to the specific network you can use either their name or ID's. **Note:** You can type in first couple of characters from container's ID, just so it's unique.
 **USAGE:**`docker network connect <network_name_or_ID> <container_name_or_ID>`
+<br>
+
 ```
 docker network connect my_app_net proxy
 ```

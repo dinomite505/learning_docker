@@ -107,6 +107,7 @@ docker network create my_app_net
 ```
 This command will create our new custom network and if you list your networks you will see it uses a *bridge driver*. `Network drivers` are built-in or 3rd-party extensions that give you virtual network features.
 <br>
+<br>
 
 ## Connecting and Disconnecting Containers to/from Custom Networks
 Next, we will use `docker container ls` to list our containers.

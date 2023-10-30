@@ -142,16 +142,17 @@ docker network connect my_app_net db
 To confirm you connected your containers to `my_app_net` you can use:
 
 ```
-docker container inspect <container_ID>
-```
-to see to which network is your specific container connected to
-<br>
-
-or
-
-<br>
-```
 docker network inspect my_app_net
+```
+
+<br>
+
+or to see to which network is your specific container connected to:
+
+<br>
+
+```
+docker container inspect <container_ID>
 ```
 
 

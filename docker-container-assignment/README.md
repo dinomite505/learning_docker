@@ -25,8 +25,6 @@ In this assignment we will be running multiple different containers, create a cu
 ```
 docker container run -d --name proxy -p 80:80 nginx
 ```
-<br>
-
 
 #### **Apache (HTTPD)**
 ```

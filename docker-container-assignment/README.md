@@ -1,6 +1,6 @@
 # Run and Test Containers
 
-In this assignment we will be running multiple different containers, create a custom network and connect those containers to it, test their connection and clean everything up. We will be using Nginx, Apache and MySQL images for our containers. This practice will give you insight to essential Docker commands and how containers work in general.
+In this assignment we will be running multiple different containers, create a custom network and connect those containers to it, test their connection, and clean everything up. We will be using Nginx, Apache and MySQL images for our containers. This short project will give you insight to essential Docker commands and how containers work in general.
 
 <br>
 
@@ -57,11 +57,11 @@ Before you run these containers, let's see what all these commands, options and 
 `--name <name>` assigns a name to the container. If you don't specify a containers name upon creation, one will be assigned to it automatically by Docker.
 <br>
 
-`-p <port>` part exposes our local e.g. port 80 on our host( local machine) and sends all traffic from it to executable running inside that container on port 80 (routes the traffic to the container IP on port 80) allowing external communication with services running inside the container. Docker publishing format is `<public_port:container_port>`. Problem occur when multiple services are running on the same public host port, not in multiple containers, because each container gets its own internal IP behind NAT, so the ports won't conflict across two container network interfaces ❗NUMBER ON THE LEFT MUST BE DIFFERENT❗.
+`-p <port>` part exposes our local e.g. port 80 on our host( local machine) and sends all traffic from it to executable running inside that container on port 80 (routes the traffic to the container IP on port 80) allowing external communication with services running inside the container. Docker publishing format is `<public_port:container_port>`. Problem occur when multiple services are running on the same public host port, not in multiple containers, because each container gets its own internal IP behind NAT, so the ports won't conflict across two container network interfaces.❗NUMBER ON THE LEFT MUST BE DIFFERENT❗.
 
 <br>
 
-`-e (or --env) MYSQL_RANDOM_ROOT_PASSWORD=yes mysql` when you are running MySQL container it is a good practice to set the environment variable to instruct MySQL to generate a root password during its initialization. 
+`-e (or --env) MYSQL_RANDOM_ROOT_PASSWORD=yes mysql` when you are running MySQL container, it is a good practice to set the environment variable to instruct MySQL to generate a root password during its initialization. 
 In this case we are generating a random password which you can find using `docker container logs <name>`.
 <br>
 
@@ -84,7 +84,7 @@ Host network gains performance by skipping virtual networks and attaches the con
 <br>
 
 ### --network none
-This option is used to completely disable networking for a container. If connected to it, the container has no network connectivity, it cannot communicate with the host, other containers or external networks. This is useful for scenarios where network access is not required and in security-sensitive cases where network must be restricted.
+This option is used to completely **disable networking for a container**. If connected to it, the container has no network connectivity, it cannot communicate with the host, other containers or external networks. This is **useful for scenarios** where network access is not required and in security-sensitive cases where network must be restricted.
 <br>
 <br>
 
@@ -207,17 +207,27 @@ $ curl localhost:8080
 
 <html><body><h1>It works!</h1></body></html>
 ```
-Positive output from Apache server too..
+Positive output from Apache server too. Open `http://localhost:8080` in your web browser to confirm.
 <br>
 
 INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE
 ### MySQL
+<br>
 
-
-
-
-
-
+Unlike Nginx and Apache which are web servers, to check if your MySQL server is running and accepting connections on your port you can use **Netcat** which is versatile and feature-rich networking utility that can handle a broader range of tasks, including bi-directional communication and file transfer. You can also use **Telnet** which is network protocol tool that allows you to establish text-based connections to remote services.
+<br>
+Here are both examples for our container:
+```
+nc -vz localhost 3306
+```
+```
+telnet localhost 3306
+```
+If the MySQL server is running and accessible you will see a successful connection message.
+```
+Connection to localhost (127.0.0.1) 3306 port [tcp/mysql] succeeded!
+```
+<br>
 
 
 

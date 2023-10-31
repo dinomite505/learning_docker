@@ -249,7 +249,7 @@ MySQL [(none)]> (to exit enter: **exit;**)
 Meaning everything is working and you are now interacting with MySQL server using MariaDB monitor.
 - - - -
 ## Cleaning Up
-
+#### Stopping Containers
 To stop the containers use `docker container stop <container_name_or_ID>` so in our case we will use:
 ```
 docker container stop proxy
@@ -259,7 +259,8 @@ You can stop containers individually or all at once by writing their names one a
 docker container stop proxy webserver db
 ```
 <br>
-
+- - - -
+#### Removing Containers
 Stopped containers are not removed containers. Why remove stopped containers:
     
 * They still consume valuable storage on your system
@@ -267,11 +268,31 @@ Stopped containers are not removed containers. Why remove stopped containers:
 * Containers are meant to be ephemeral and isolated
 * Their temporary or orphaned files can create unnecessary clutter on your host system
 * You may encounter conflict because of container names or IDs
+<br>
 
+For that matter we use:
+```
+docker container rm proxy webserver db
+```
+You can also remove **runnning** containers, but Docker doesn't allow that if you don't use **force** `-f` or `kill`. Both essentially do the same thing:
+```
+docker container rm -f <container_name_or_ID>
+```
+```
+docker container kill <container_name_or_ID>
+```
+- - - -
+#### Confirm Clean Space
 
+To confirm that everything is clean you should use:
+```
+docker container ls -l
+```
+This command will show you both running and stopped containers if there's any.
+<br>
+<br>
 
-
-
+**The end**
 
 
 

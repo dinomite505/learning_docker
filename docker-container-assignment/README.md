@@ -22,10 +22,8 @@ In this assignment we will be running multiple different containers, create a cu
     * Confirm that containers are removed
     * Remove the images and network if needed
 
-<br>
 
 - - - -
-<br>
 
 ## Creating and Starting Containers
 <br>

@@ -221,7 +221,7 @@ INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT
 - - - -
 ### MySQL
 
-Unlike Nginx and Apache which are web servers, to check if your MySQL server is running and accepting connections on your port you can use **Netcat** which is versatile and feature-rich networking utility that can handle a broader range of tasks, including bi-directional communication and file transfer. You can also use **Telnet** which is network protocol tool that allows you to establish text-based connections to remote services.
+Unlike Nginx and Apache which are web servers, to check if your MySQL server is running and accepting connections on your port you can use `**Netcat**` which is versatile and feature-rich networking utility that can handle a broader range of tasks, including bi-directional communication and file transfer. You can also use **Telnet** which is network protocol tool that allows you to establish text-based connections to remote services.
 <br>
 Here are both examples for our container:
 ```
@@ -299,10 +299,3 @@ docker container ls -l
 This command will show you both running and stopped containers if there's any.
 <br>
 <br>
-
-**The end**
-
-
-
-
-docker container top

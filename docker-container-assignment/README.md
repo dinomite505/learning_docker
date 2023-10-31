@@ -267,6 +267,7 @@ docker container stop proxy webserver db
 ```
 <br>
 - - - -
+
 #### Removing Containers
 Stopped containers are not removed containers. Why remove stopped containers:
     
@@ -289,7 +290,7 @@ docker container rm -f <container_name_or_ID>
 docker container kill <container_name_or_ID>
 ```
 - - - -
-#### Confirm Clean Space
+## Confirm Clean Space
 
 To confirm that everything is clean you should use:
 ```

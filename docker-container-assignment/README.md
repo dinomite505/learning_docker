@@ -44,7 +44,7 @@ docker container run -d --name db -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes
 <br>
 <br>
 
-Before you run these containers, let's see what all these commands, options and arguments actually do:
+:bulb: Before you run these containers, let's see what all these commands, options and arguments actually do:
 
 <br>
 

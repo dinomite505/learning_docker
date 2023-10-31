@@ -25,7 +25,7 @@ In this assignment we will be running multiple different containers, create a cu
 
 - - - -
 
-## Creating and Starting Containers
+## Creating and Starting Containers :gear:
 
 ### **Nginx**
 ```
@@ -221,7 +221,7 @@ INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT
 - - - -
 ### MySQL
 
-Unlike Nginx and Apache which are web servers, to check if your MySQL server is running and accepting connections on your port you can use `**Netcat**` which is versatile and feature-rich networking utility that can handle a broader range of tasks, including bi-directional communication and file transfer. You can also use **Telnet** which is network protocol tool that allows you to establish text-based connections to remote services.
+Unlike Nginx and Apache which are web servers, to check if your MySQL server is running and accepting connections on your port you can use `Netcat` which is versatile and feature-rich networking utility that can handle a broader range of tasks, including bi-directional communication and file transfer. You can also use `Telnet` which is network protocol tool that allows you to establish text-based connections to remote services.
 <br>
 Here are both examples for our container:
 ```
@@ -240,7 +240,7 @@ To interact with the MySQL server and execute SQL queries you should use client 
 ```
 mysql -h localhost -P 3306 -u root -p
 ```
-You will then be prompted to enter the `RANDOM_ROOT_PASSWORD` you specified upon container's creation which you can find if you enter `docker container logs db`. If you used `ALLOW_EMPTY_PASSWORD` you will be logged in automatically as a root user.
+:lock: You will then be prompted to enter the `RANDOM_ROOT_PASSWORD` you specified upon container's creation which you can find if you enter `docker container logs db`. If you used `ALLOW_EMPTY_PASSWORD` you will be logged in automatically as a root user.
 <br>
 
 After successful login you should get something like this:
@@ -255,7 +255,7 @@ MySQL [(none)]> (to exit enter: **exit;**)
 ```
 Meaning everything is working and you are now interacting with MySQL server using MariaDB monitor.
 - - - -
-## Cleaning Up
+## Cleaning Up :wastebasket:
 #### Stopping Containers
 To stop the containers use `docker container stop <container_name_or_ID>` so in our case we will use:
 ```

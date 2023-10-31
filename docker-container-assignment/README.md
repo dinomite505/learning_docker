@@ -47,7 +47,6 @@ docker container run -d --name db -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes
 
 Before you run these containers, let's see what all these commands, options and arguments actually do:
 
-***Explanation***
 <br>
 
 `docker container run` create and starts a new Docker container from a specified image.

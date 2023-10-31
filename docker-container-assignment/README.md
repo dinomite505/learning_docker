@@ -229,10 +229,24 @@ Connection to localhost (127.0.0.1) 3306 port [tcp/mysql] succeeded!
 ```
 <br>
 
+To interact with the MySQL server and execute SQL queries you should use client like this:
+```
+mysql -h localhost -P 3306 -u root -p
+```
+You will then be prompted to enter the `RANDOM_ROOT_PASSWORD` you specified upon container's creation which you can find if you enter `docker container logs db`. If you used `ALLOW_EMPTY_PASSWORD` you will be logged in automatically as a root user.
+<br>
 
-
-
-
+After successful login you should get something like this:
+```
+WARNING: Forcing protocol to  TCP  due to option specification. Please explicitly state intended protocol.
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+MySQL connection id is 9
+Server version: 8.1.0 MySQL Community Server - GPL
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+MySQL [(none)]> (to exit enter: **exit;**)
+```
+Meaning everything is working and you are now interacting with MySQL server using MariaDB monitor.
 
 
 

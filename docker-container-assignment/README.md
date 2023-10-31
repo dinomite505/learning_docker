@@ -24,9 +24,9 @@ In this assignment we will be running multiple different containers, create a cu
 
 
 - - - -
+<br>
 
 ## Creating and Starting Containers
-<br>
 
 ### **Nginx**
 ```

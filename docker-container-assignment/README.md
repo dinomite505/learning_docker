@@ -261,11 +261,12 @@ docker container stop proxy webserver db
 <br>
 
 Stopped containers are not removed containers. Why remove stopped containers:
-    * They still consume valuable storage on your system
-    * It can pose security risks because its files are still in filesystem
-    * Containers are meant to be ephemeral and isolated
-    * Their temporary or orphaned files can create unnecessary clutter on your host system
-    * You may encounter conflict because of container names or IDs
+    
+* They still consume valuable storage on your system
+* It can pose security risks because its files are still in filesystem
+* Containers are meant to be ephemeral and isolated
+* Their temporary or orphaned files can create unnecessary clutter on your host system
+* You may encounter conflict because of container names or IDs
 
 
 

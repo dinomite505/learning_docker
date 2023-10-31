@@ -73,7 +73,7 @@ You can also use `-e MYSQL_ALLOW_EMPTY_PASSWORD=yes` allowing to start MySQL con
 <br>
 
 - - - -
-## Docker Networks
+## Docker Networks :globe_with_meridians:
 
 ### --network bridge
 When we start a new container, and don't specify the network, it will automatically use the default virtual `bridge` network. Each container within bridge network gets its own IP address and they use Network Address Translation (NAT) configuration that maps container IP addresses to the host machine's IP address. Bridge network brings **isolation** from the host and other containers and container's **inter-communication**.

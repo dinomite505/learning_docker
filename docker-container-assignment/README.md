@@ -169,6 +169,7 @@ docker container inspect <container_ID>
 
 - - - -
 ## Testing Container Ports :wrench:
+- - - -
 ### Nginx
 ```
 $ curl localhost
@@ -201,6 +202,7 @@ From the output we see the default welcome page of the Nginx web server. It indi
 <br>
 
 INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE
+- - - -
 ### Apache (HTTPD)
 ```
 $ curl localhost:8080
@@ -211,8 +213,8 @@ Positive output from Apache server too. Open `http://localhost:8080` in your web
 <br>
 
 INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE
+- - - -
 ### MySQL
-<br>
 
 Unlike Nginx and Apache which are web servers, to check if your MySQL server is running and accepting connections on your port you can use **Netcat** which is versatile and feature-rich networking utility that can handle a broader range of tasks, including bi-directional communication and file transfer. You can also use **Telnet** which is network protocol tool that allows you to establish text-based connections to remote services.
 <br>

@@ -25,7 +25,10 @@ In this assignment we will be running multiple different containers, create a cu
 <br>
 
 - - - -
+<br>
+
 ## Creating and Starting Containers
+<br>
 
 ### **Nginx**
 ```
@@ -44,7 +47,8 @@ docker container run -d --name db -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes
 <br>
 <br>
 
-- - - -
+Before you run these containers, let's see what all these commands, options and arguments actually do:
+
 ***Explanation***
 <br>
 
@@ -118,7 +122,7 @@ This command will create our new custom network and if you list your networks wi
 <br>
 
 - - - -
-## Connecting and Disconnecting Containers to/from Custom Networks
+## Connecting and Disconnecting Containers to/from Custom Networks 
 ```
 docker network connect - dynamically creates a NIC in a container on an existing virtual network.
 docker network disconnect - dynamically removes a NIC from a container on a specific virtual network
@@ -168,7 +172,7 @@ docker container inspect <container_ID>
 <br>
 
 - - - -
-## Testing Container Ports
+## Testing Container Ports :wrench:
 ### Nginx
 ```
 $ curl localhost
@@ -197,7 +201,7 @@ Commercial support is available at
 </body>
 </html>
 ```
-From the output we see the default welcome page of the Nginx web server. It indicates that Nginx is running and properly configured within our container. You can also open `localhost` in our web browser to check.
+From the output we see the default welcome page of the Nginx web server. It indicates that Nginx is running and properly configured within our container. Open `http://localhost` in our web browser to check.
 <br>
 
 INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE

@@ -169,7 +169,8 @@ docker container inspect <container_ID>
 
 - - - -
 ## Testing Container Ports :wrench:
-- - - -
+<br>
+
 ### Nginx
 ```
 $ curl localhost
@@ -202,6 +203,8 @@ From the output we see the default welcome page of the Nginx web server. It indi
 <br>
 
 INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE
+<br>
+
 - - - -
 ### Apache (HTTPD)
 ```
@@ -213,6 +216,8 @@ Positive output from Apache server too. Open `http://localhost:8080` in your web
 <br>
 
 INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE
+<br>
+
 - - - -
 ### MySQL
 

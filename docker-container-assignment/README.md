@@ -99,7 +99,6 @@ Host network gains performance by skipping virtual networks and attaches the con
 ### --network none
 This option is used to completely **disable networking for a container**. If connected to it, the container has no network connectivity, it cannot communicate with the host, other containers or external networks. This is **useful for scenarios** where network access is not required and in security-sensitive cases where network must be restricted.
 <br>
-<br>
 
 Upon the creation of our containers we could've create a new container, and new network, and assign this container to it in one command like this:
 <br>

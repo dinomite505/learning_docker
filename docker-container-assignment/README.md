@@ -75,6 +75,19 @@ You can also use `-e MYSQL_ALLOW_EMPTY_PASSWORD=yes` allowing to start MySQL con
 - - - -
 ## Docker Networks :globe_with_meridians:
 
+To **list** your networks:
+```
+docker network ls
+```
+#### Output
+```
+NETWORK ID     NAME      DRIVER    SCOPE
+623f161289a7   bridge    bridge    local
+8ff3c28c9add   host      host      local
+2b25473ca5bc   none      null      local
+```
+<br>
+
 ### --network bridge
 When we start a new container, and don't specify the network, it will automatically use the default virtual `bridge` network. Each container within bridge network gets its own IP address and they use Network Address Translation (NAT) configuration that maps container IP addresses to the host machine's IP address. Bridge network brings **isolation** from the host and other containers and container's **inter-communication**.
 <br>
@@ -86,19 +99,6 @@ Host network gains performance by skipping virtual networks and attaches the con
 ### --network none
 This option is used to completely **disable networking for a container**. If connected to it, the container has no network connectivity, it cannot communicate with the host, other containers or external networks. This is **useful for scenarios** where network access is not required and in security-sensitive cases where network must be restricted.
 <br>
-<br>
-
-**To list** your networks:
-```
-docker network ls
-```
-#### Output
-```
-NETWORK ID     NAME      DRIVER    SCOPE
-623f161289a7   bridge    bridge    local
-8ff3c28c9add   host      host      local
-2b25473ca5bc   none      null      local
-```
 <br>
 
 Upon the creation of our containers we could've create a new container, and new network, and assign this container to it in one command like this:

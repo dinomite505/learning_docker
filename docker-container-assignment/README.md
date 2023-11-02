@@ -118,10 +118,11 @@ This command will create our new custom network and if you list your networks wi
 
 - - - -
 ## Connecting and Disconnecting Containers to/from Custom Networks 
-```
-docker network connect - dynamically creates a NIC in a container on an existing virtual network.
-docker network disconnect - dynamically removes a NIC from a container on a specific virtual network
-```
+
+`docker network connect` - dynamically creates a NIC in a container on an existing virtual network.
+`docker network disconnect` - dynamically removes a NIC from a container on a specific virtual network
+<br>
+
 Next, we will use `docker container ls` to list our containers.
 <br>
 

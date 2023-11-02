@@ -4,4 +4,13 @@
 services:
   drupal:
     image: drupal:9
-    
+    # if you have Drupal image locally, you can inspect it and check exposed ports assigned
+    ports:
+      - "8080:80"
+    volumes:
+      -
+  postgres:
+    image: postgres:16
+    # check the Postgres or Drupal documentation on how to use environmental variables
+    environment:
+      - POSTGRES_PASSWORD=mypassword

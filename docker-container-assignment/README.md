@@ -124,6 +124,7 @@ This command will create our new custom network and if you list your networks wi
 
 `docker network disconnect` - dynamically removes a NIC from a container on a specific virtual network
 <br>
+<br>
 
 Next, we will use `docker container ls` to list our containers.
 <br>

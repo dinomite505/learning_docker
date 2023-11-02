@@ -1,0 +1,7 @@
+# version is not needed for docker compose CLI (as of 2020)
+# All 2.x and 3.x features are supported
+
+services:
+  drupal:
+    image: drupal:9
+    

@@ -2,6 +2,7 @@
 
 In this assignment we will be running multiple different containers, create a custom network and connect those containers to it, test their connection, and clean everything up. We will be using Nginx, Apache and MySQL images for our containers. This short project will give you insight to essential Docker commands and how containers work in general.
 
+Before you start with the assignment, make sure you have Docker installed. You can find all information on how to install Docker Desktop and Docker Engine for different systems here: https://docs.docker.com/desktop/
 <br>
 
 ## Assignment info :clipboard:

@@ -80,6 +80,7 @@ Open `http://localhost` in our web browser to check Nginx server.
 ![nginx](https://github.com/dinomite505/learning_docker/assets/131146683/646b7fd9-16d7-4315-a685-b2d55ba4f8b8)
 <br>
 
+- - - -
 Open `http://localhost:8080` in your web browser to check your Apache server.
 
 ![apache2](https://github.com/dinomite505/learning_docker/assets/131146683/7ee2a177-a4bd-4fdd-a760-6be763207ab4)

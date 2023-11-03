@@ -79,7 +79,7 @@ You can also use `-e MYSQL_ALLOW_EMPTY_PASSWORD=yes` allowing to start MySQL con
 <br>
 
 
-Now, **run your containers** and this should be the output.
+Now, **run your containers** and check the output in your web browser.
 <br>
 
 Open `http://localhost` in our web browser to check Nginx server.

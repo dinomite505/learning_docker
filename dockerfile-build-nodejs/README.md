@@ -153,7 +153,7 @@ Open `localhost` and refresh. Check terminal streams to confirm.
 #### Note 
 **Clean everything up once you're done.**
 ```
-docker ps -a
+docker container ls -a
 ```
 ```
 docker container prune

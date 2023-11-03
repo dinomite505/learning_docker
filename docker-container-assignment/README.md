@@ -125,6 +125,7 @@ Host network gains performance by skipping virtual networks and attaches the con
 ### --network none
 This option is used to completely **disable networking for a container**. If connected to it, the container has no network connectivity, it cannot communicate with the host, other containers or external networks. This is **useful for scenarios** where network access is not required and in security-sensitive cases where network must be restricted.
 <br>
+<br>
 
 Upon the creation of our containers we could've create a new container, and new network, and assign this container to it in one command like this:
 <br>
@@ -148,7 +149,7 @@ This command will create our new custom network and if you list your networks wi
 
 So what is the purpose of connecting containers to a custom network? Their communication purpose varies but often includes inter-container communication, load balancing, data sharing, and exposing services to the wider network or internet while maintaining internal control and security.
 
-:heavy_exclamation_mark: NOTE :heavy_exclamation_mark: : Containers connected to default `bridge` network don't have DNS server built into it by default. They are assigned dynamic IP addresses by Docker's IPAM driver. On the other hand, containers attached to a `custom network` use Docker's embedded DNS server which means those containers use DNS naming and Docker uses the container names as the equivalent of a host name for containers to talk with each other. Containers are designed to be dynamic, and their IP addresses may change as they stop, restart or are relocated to different hosts. So, rather than relying on fixed IP addresses, use DNS resolution instead.
+:heavy_exclamation_mark:NOTE:heavy_exclamation_mark: : Containers connected to default `bridge` network don't have DNS server built into it by default. They are assigned dynamic IP addresses by Docker's IPAM driver. On the other hand, containers attached to a `custom network` use Docker's embedded DNS server which means those containers use DNS naming and Docker uses the container names as the equivalent of a host name for containers to talk with each other. Containers are designed to be dynamic, and their IP addresses may change as they stop, restart or are relocated to different hosts. So, rather than relying on fixed IP addresses, use DNS resolution instead.
 
 `docker network connect` - dynamically creates a NIC in a container on an existing virtual network.
 <br>

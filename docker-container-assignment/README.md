@@ -95,6 +95,11 @@ Open `http://localhost:8080` in your web browser to check your Apache server.
 
 - - - -
 ## Docker Networks :globe_with_meridians:
+<br>
+
+Container networking refers to the ability for containers to connect to and communicate with each other, or to non-Docker workloads.
+
+A container has no information about what kind of network it's attached to, or whether their peers are also Docker workloads or not. A container only sees a network interface with an **IP address**, a **gateway**, a **routing table**, **DNS services**, and other networking details. That is, unless the container uses the `none` network driver.
 
 To **list** your networks:
 ```
@@ -142,6 +147,8 @@ This command will create our new custom network and if you list your networks wi
 <br>
 
 So what is the purpose of connecting containers to a custom network? Their communication purpose varies but often includes inter-container communication, load balancing, data sharing, and exposing services to the wider network or internet while maintaining internal control and security.
+
+:heavy_exclamation_mark: NOTE :heavy_exclamation_mark: : Containers connected to default `bridge` network don't have DNS server built into it by default. They are assigned dynamic IP addresses by Docker's IPAM driver. On the other hand, containers attached to a `custom network` use Docker's embedded DNS server which means those containers use DNS naming and Docker uses the container names as the equivalent of a host name for containers to talk with each other. Containers are designed to be dynamic, and their IP addresses may change as they stop, restart or are relocated to different hosts. So, rather than relying on fixed IP addresses, use DNS resolution instead.
 
 `docker network connect` - dynamically creates a NIC in a container on an existing virtual network.
 <br>

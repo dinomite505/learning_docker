@@ -69,10 +69,10 @@ docker container run -d --name db -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes
 
 `-e (or --env) MYSQL_RANDOM_ROOT_PASSWORD=yes mysql` when you are running MySQL container, it is a good practice to set the environment variable to instruct MySQL to generate a root password during its initialization. 
 In this case we are generating a random password which you can find using `docker container logs <name>`.
-:lock: Save your password if you want to execute SQL queries
 <br>
 
 When you open logs, locate `GENERATED ROOT PASSWORD` section to see your MySQL password.
+:lock: Save your password if you want to execute SQL queries.
 <br>
 
 You can also use `-e MYSQL_ALLOW_EMPTY_PASSWORD=yes` allowing to start MySQL container with an empty root password (not recommended for production environments) or `-e MYSQL_ROOT_PASSWORD=my_secret_password` to set a specific password of your choice.

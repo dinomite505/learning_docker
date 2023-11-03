@@ -1,7 +1,7 @@
 # no version needed as of 2020
 # 2.x and 2.x features are supported
 
-# this compose sample uses HTML static site from https://startbootstrap.com/themes/agency/
+# this compose sample uses HTML static site Bootstrap template from https://startbootstrap.com/themes/agency/
 
 services:
   proxy:
@@ -12,7 +12,9 @@ services:
     image: nginx-custom
     ports:
       - '80:80'
+  # web server running Apache
   web:
     image: httpd
+    # mounting html source files into that Apache server
     volumes:
       - .html:/usr/local/apache2/htdocs

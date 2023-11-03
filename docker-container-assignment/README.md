@@ -72,6 +72,20 @@ You can also use `-e MYSQL_ALLOW_EMPTY_PASSWORD=yes` allowing to start MySQL con
 <br>
 <br>
 
+After you run your containers this should be the output:
+<br>
+
+Open `http://localhost` in our web browser to check Nginx server.
+
+![nginx](https://github.com/dinomite505/learning_docker/assets/131146683/646b7fd9-16d7-4315-a685-b2d55ba4f8b8)
+<br>
+
+Open `http://localhost:8080` in your web browser to check your Apache server.
+
+![apache2](https://github.com/dinomite505/learning_docker/assets/131146683/7ee2a177-a4bd-4fdd-a760-6be763207ab4)
+<br>
+
+
 - - - -
 ## Docker Networks :globe_with_meridians:
 
@@ -202,10 +216,7 @@ Commercial support is available at
 </body>
 </html>
 ```
-From the output we see the default welcome page of the Nginx web server. It indicates that Nginx is running and properly configured within our container. Open `http://localhost` in our web browser to check.
-<br>
-
-INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE
+From the output we see the default welcome page of the Nginx web server. It indicates that Nginx is running and properly configured within our container.
 <br>
 
 - - - -
@@ -215,7 +226,7 @@ $ curl localhost:8080
 
 <html><body><h1>It works!</h1></body></html>
 ```
-Positive output from Apache server too. Open `http://localhost:8080` in your web browser to confirm.
+Positive output from Apache server too.
 <br>
 
 INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE

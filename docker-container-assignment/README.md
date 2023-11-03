@@ -28,16 +28,21 @@ In this assignment we will be running multiple different containers, create a cu
 ## Creating and Starting Containers :gear:
 
 ### **Nginx**
+Nginx is a popular web server and reverse proxy. In Docker, Nginx is often used to serve web applications, static content, or as a load balancer for distributing incoming web traffic. It is easily deployed and configured within Docker to efficiently manage web requests.
 ```
 docker container run -d --name proxy -p 80:80 nginx
 ```
+<br>
 
 ### **Apache (HTTPD)**
+Apache, often referred to as HTTPD, is another widely used web server. In a Docker container, it serves web content, hosts websites and handles HTTP requests. Docker allows for a consistent and portable deployment of Apache, making it easier to manage and scale web hosting environments.
 ```
 docker container run -d --name webserver -p 8080:80 httpd
 ```
+<br>
 
 ### **MySQL**
+MySQL is a popular relation database management system. Running MySQL within a Docker container allows you to isolate and manage your database instance with ease. It's commonly used for web applications to store, retrieve and manage data.
 ```
 docker container run -d --name db -p 3306:3306 -e MYSQL_RANDOM_ROOT_PASSWORD=yes mysql
 ```
@@ -134,6 +139,9 @@ This command will create our new custom network and if you list your networks wi
 
 - - - -
 ## Connecting and Disconnecting Containers to/from Custom Networks 
+<br>
+
+So what is the purpose of connecting containers to a custom network? Their communication purpose varies but often includes inter-container communication, load balancing, data sharing, and exposing services to the wider network or internet while maintaining internal control and security.
 
 `docker network connect` - dynamically creates a NIC in a container on an existing virtual network.
 <br>

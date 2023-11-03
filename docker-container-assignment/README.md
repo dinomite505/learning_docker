@@ -248,8 +248,6 @@ $ curl localhost:8080
 Positive output from Apache server too.
 <br>
 
-INSERT PHOTO- SCREENSHOT; ISSUES; COMMIT NEW ISSUE; PASTE PHOTO; COPY CODE; EXIT; EDIT README; PASTE THE CODE
-<br>
 
 - - - -
 ### MySQL

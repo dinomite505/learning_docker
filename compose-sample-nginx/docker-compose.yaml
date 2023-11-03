@@ -18,3 +18,8 @@ services:
     # mounting html source files into that Apache server
     volumes:
       - .html:/usr/local/apache2/htdocs
+
+
+# When we run the 'docker compose up' command it is first going to check the name of the image in my cache
+# In case id doesn't find it, it is going to use that nginx.Dockerfile to build a new image specified there
+# We are not changin proxy config, so no bind mounts though compose file. Just building a new image.

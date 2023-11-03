@@ -19,3 +19,10 @@ services:
     # check the Postgres or Drupal documentation on how to use environmental variables
     environment:
       - POSTGRES_PASSWORD=mypassword
+
+# check compose volume reference
+volumes:
+  drupal-modules:
+  drupal-profiles:
+  drupal-sites:
+  drupal-themes:

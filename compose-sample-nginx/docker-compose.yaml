@@ -9,7 +9,6 @@ services:
       # building Docker file in current dirrectory
       context: .
       dockerfile: nginx.Dockerfile
-    image: nginx-custom
     ports:
       - '80:80'
   # web server running Apache
@@ -17,7 +16,7 @@ services:
     image: httpd
     # mounting html source files into that Apache server
     volumes:
-      - .html:/usr/local/apache2/htdocs
+      - ./html:/usr/local/apache2/htdocs/
 
 
 # When we run the 'docker compose up' command it is first going to check the name of the image in my cache

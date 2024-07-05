@@ -1,12 +1,12 @@
-# no version needed as of 2020
+# No version needed as of 2020
 # 2.x and 2.x features are supported
 
-# this compose sample uses HTML static site Bootstrap template from https://startbootstrap.com/themes/agency/
+# This compose sample uses an HTML static site Bootstrap template from https://startbootstrap.com/themes/agency/
 
 services:
   proxy:
     build:
-      # building Docker file in current dirrectory
+      # Building Docker file in the current directory
       context: .
       dockerfile: nginx.Dockerfile
     ports:
@@ -14,11 +14,11 @@ services:
   # web server running Apache
   web:
     image: httpd
-    # mounting html source files into that Apache server
+    # mounting HTML source files into that Apache server
     volumes:
       - ./html:/usr/local/apache2/htdocs/
 
 
 # When we run the 'docker compose up' command it is first going to check the name of the image in my cache
-# In case id doesn't find it, it is going to use that nginx.Dockerfile to build a new image specified there
-# We are not changin proxy config, so no bind mounts though compose file. Just building a new image.
+# If it doesn't find it, it will use that nginx.Dockerfile to build a new image specified there
+# We are not changing the proxy config, so no bind mounts through the compose file. Just building a new image.
